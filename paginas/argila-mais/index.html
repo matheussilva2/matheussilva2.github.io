@@ -14,11 +14,25 @@
 		.card-icone{
 			font-size: 35px;
 		}
+		div.carousel-item{
+			height: 430px;
+			max-height: 430px;
+		}
 	</style>
 </head>
 <body>
-	<header>
-		
+	<header class="container-fluid bg-success py-md-2">
+		<nav class="navbar navbar-expand navbar-dark">
+			<a href="index.html" class="navbar-brand text-light">Argila Mais</a>
+			<ul class="navbar-nav navbar-light">
+				<li class="nav-item">
+					<a href="index.html" class="nav-link">Início</a>
+				</li>
+				<li class="nav-item">
+					<a href="contato.html" class="nav-link">Contato</a>
+				</li>
+			</ul>
+		</nav>
 	</header>
 	<!-- Slide -->
 	<div data-ride="carousel" class="carousel slide" id="demo">
@@ -27,23 +41,22 @@
 			<li data-target="#demo" data-slide-to="1"></li>
 			<li data-target="#demo" dada-slide-to="2"></li>
 		</ul>
-
 		<div class="carousel-inner">
-			<div class="container-fluid carousel-item active" style="height: 600px; background: url('images/img-slide-1.jpg') center;">
+			<div class="container-fluid carousel-item active" style="background: url('images/img-slide-1.jpg') center;">
 				<div class="carousel-caption">
-					<p class="card-title">Título 1</p>
+					<h3 class="card-title">Título 1</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure vitae amet, veniam rerum voluptates earum exercitationem obcaecati perferendis natus odio nisi non illum dolorum repudiandae quos commodi vel nobis culpa!</p>
 				</div>
 			</div>
-			<div class="carousel-item" style="height: 600px; background: url('images/img-slide-2.jpg') center;">
+			<div class="carousel-item" style="background: url('images/img-slide-2.jpg') center;">
 				<div class="carousel-caption">
-					<p class="card-title">Título 2</p>
+					<h3 class="card-title">Título 2</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione a recusandae velit eius atque maxime, perspiciatis non magnam dolor. Eligendi iure quis fugit, itaque minima quod, eos. Excepturi, molestias quidem.</p>
 				</div>
 			</div>
-			<div class="carousel-item" style="height: 600px; background: url('images/img-slide-3.jpg') center;">
+			<div class="carousel-item" style="background: url('images/img-slide-3.jpg') center;">
 				<div class="carousel-caption">
-					<p class="card-title">Título 3</p>
+					<h3 class="card-title">Título 3</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, aspernatur alias repudiandae aut sed, ullam dolores ducimus ipsam aperiam amet! Repudiandae totam tempora ex dolore minus molestiae sit nulla, quae?</p>
 				</div>
 			</div>
