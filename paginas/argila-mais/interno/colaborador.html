@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Argila Mais - Colaborador</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	</head>
+	<body class="bg-light">
+		<header class="navbar navbar-expand-lg bg-success navbar-dark p-0 p-lg-2">
+			<h1 class="navbar-brand d-none d-lg-inline">Argila Mais</h1>
+
+			<button class="navbar-toggler m-2" type="button" data-toggle="collapse" data-target="#navMobile">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<nav id="navMobile" class="collapse navbar-collapse">
+				<img alt="imagem do usuário" src="../images/default-user.png" class="rounded-circle m-4 text-white" width="20%">
+				<ul class="navbar-nav w-100">
+					<li class="nav-item"><a class="text-white pl-4 btn btn-success nav-link text-left">Início</a></li>
+					<li class="nav-item"><a class="text-white pl-4 btn btn-success nav-link text-left">Registro de Ponto</a></li>
+					<li class="nav-item"><a class="text-white pl-4 btn btn-success nav-link text-left">Minhas Vendas</a></li>
+					<li class="nav-item"><a class="text-white pl-4 btn btn-success nav-link text-left">Gerenciar Estoque</a></li>
+					<li class="nav-item"><a class="text-white pl-4 btn btn-success nav-link text-left">Gerenciar Colaboradores</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- Resumo do Colaborador -->
+
+		<div class="container-fluid bg-success pb-3">
+			<img src="../images/default-user.png" class="rounded-circle text-white mt-4 mb-2" width="25%" alt="imagem do usuário" style="margin-left: 37%;">
+			<h2 class="h3 text-center text-light mb-2">Nome do Colaborador</h2>
+			<p class="text-white text-center m-0"><strong>Situação:</strong> Contratado</p>
+		</div>
+		
+		<!-- Informações Gerais sobre o Colaborador -->
+		<div class="container-fluid bg-white p-0">
+			<div id="infoColaborador">
+				<!--Campo-->
+				<button type="button" class="btn text-dark font-weight-bold py-3 bg-white w-100 b-0" data-target="#infoGerais" data-toggle="collapse"><h4>Informações Gerais</h4></button>
+				<div class="px-4 py-2 collapse" id="infoGerais" data-parent="#infoColaborador">
+					<div class="row">
+						<div class="col-4"><strong>Matrícula</strong>: </div>
+						<div class="col-8">10552</div>
+					</div>
+					<div class="row">
+						<div class="col-4"><strong>Nome</strong>: </div>
+						<div class="col-8">Matheus Silva do Nascimento</div>
+					</div>
+					<div class="row">
+						<div class="col-4"><strong>Nascimento</strong>: </div>
+						<div class="col-8">00/00/0000</div>
+					</div>
+					<div class="row">
+						<div class="col-4"><strong>CPF</strong>: </div>
+						<div class="col-8">000.000.000-12</div>
+					</div>
+					<div class="row">
+						<div class="col-4"><strong>RG</strong>: </div>
+						<div class="col-8">0000000-0</div>
+					</div>
+					<div class="row">
+						<div class="col-4"><strong>Status</strong>: </div>
+						<div class="col-8">Contratado</div>
+					</div>
+				</div>
+
+				<!--Campo-->
+				<button data-toggle="collapse" data-target="#resumoVendas" class="btn text-dark font-weight-bold bg-white w-100 b-0 py-3">
+					<h4>Resumo de Vendas</h4>
+				</button>
+
+				<div class="collapse" id="resumoVendas" data-parent="#infoColaborador">
+
+					<button data-toggle="collapse" data-target="#quantidadeVendas"class="btn text-dark font-weight-bold bg-light w-100 b-0 py-3">Vendas</button>
+					<div id="quantidadeVendas" class="collapse" data-parent="#resumoVendas">
+						<div class="row p-3">
+							<div class="col-6"><strong>Hoje</strong></div>
+							<div class="col-6">12</div>
+							<div class="col-6"><strong>Semana</strong></div>
+							<div class="col-6">105</div>
+							<div class="col-6"><strong>Mês</strong></div>
+							<div class="col-6">805</div>
+						</div>
+					</div>
+
+					<button data-toggle="collapse" data-target="#lucro" class="btn text-dark font-weight-bold bg-light w-100 b-0 py-3">Lucro</button>
+					<div id="lucro" class="collapse" data-parent="#resumoVendas">
+						<div class="row p-3">
+							<div class="col-6"><strong>Hoje</strong></div>
+							<div class="col-6">12</div>
+							<div class="col-6"><strong>Semana</strong></div>
+							<div class="col-6">105</div>
+							<div class="col-6"><strong>Mês</strong></div>
+							<div class="col-6">805</div>
+						</div>
+					</div>
+					<button data-toggle="collapse" data-target="#mediaVendas" class="btn text-dark font-weight-bold bg-light w-100 b-0 py-3">Média de Vendas</button>
+					<div id="mediaVendas" class="collapse" data-parent="#resumoVendas">
+						<div class="row p-3">
+							<div class="col-6"><strong>Semana</strong></div>
+							<div class="col-6">105</div>
+							<div class="col-6"><strong>Mês</strong></div>
+							<div class="col-6">805</div>
+						</div>
+					</div>
+					<button data-toggle="collapse" data-target="#mediaLucro" class="btn text-dark font-weight-bold bg-light w-100 b-0 py-3">Média Lucro</button>
+					<div id="mediaLucro" class="collapse" data-parent="#resumoVendas">
+						<div class="row p-3">
+							<div class="col-6"><strong>Semana</strong></div>
+							<div class="col-6">105</div>
+							<div class="col-6"><strong>Mês</strong></div>
+							<div class="col-6">805</div>
+						</div>
+					</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</body>
+</html>
