@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap 4 - Navs</title>
+	<link rel="stylesheet" type="text/css" href="_css/bootstrap.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<style type="text/css">
+		p{
+			text-indent: 5%;
+		}
+	</style>
+</head>
+<body>
+	<header class="container-fluid py-2 pl-4 bg-success text-light">
+		<h1>Bootstrap 4 - Navs</h1>
+	</header>
+	<article class="container bg-light py-4">
+		<h2>Nav Menus</h2>
+		<p>Se quer criar um simples menu horizontal, crie um lista desordenada &lt;ul&gt; com a class .nav, cada &lt;li&gt; com a class .nav-item e cada &lt;a&gt; com a class .nav-link</p>
+		<ul class="nav">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 3</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Desativado</a>
+			</li>
+		</ul>
+		<!--Exemplo-->
+		<button type="button" class="btn btn-success m-3" data-target="#exemplo-nav" data-toggle="collapse">Mostrar código</button>
+		<div class="container bg-dark px-4 pt-2 my-2 collapse" id="exemplo-nav">
+
+			<span class="text-light">Código</span>
+
+			<code><pre style="font-size: 13pt;" class="text-light">
+&lt;ul class="nav"&gt;
+	&lt;li class="nav-item"&gt;
+		&lt;a class="nav-link" href="#"&gt;Item 1&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class="nav-item"&gt;
+		&lt;a class="nav-link" href="#"&gt;Item 2&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class="nav-item"&gt;
+		&lt;a class="nav-link" href="#"&gt;Item 3&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class="nav-item"&gt;
+		&lt;a class="nav-link disabled" href="#"&gt;Desativado&lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+			</pre></code>
+	</div>
+	<!-- fim exemplo -->
+
+		<h2>Alinhando .nav</h2>
+		<p>Você pode alinhar sua nav no meio ou à direita adicionando as classes .justify-content-center ou .justify-content-end na tag &lt;ul&gt;</p>
+		
+		<span>Usando o mesmo evento de antes, teremos estes resultados:<br/>
+		Alinhando no Centro</span>
+		<!--Exemplo-->
+		<ul class="nav justify-content-center">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 3</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Desativado</a>
+			</li>
+		</ul>
+		<span>Alinhando à Direita</span>
+		<ul class="nav justify-content-end">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 3</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Desativado</a>
+			</li>
+		</ul>
+		<!-- Fim Exemplo -->
+
+		<h2>Nav Vertical</h2>
+		<p>Para criar um nav vertical, use a class .flex-column na tag &lt;ul&gt;, Aplicando o mesmo exemplo citado anteriormente, teremos:</p>
+		<ul class="nav flex-column">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 3</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Desativado</a>
+			</li>
+		</ul>
+
+		<h2>Nav em Abas</h2>
+		<p>Se quisermos separar os itens em abas adicionamos ao &lt;ul&gt; a class .nav-tabs e a class .active para definir a aba ativa.<br>
+		Usando o mesmo exemplo, terá este resultado:</p>
+		<ul class="nav nav-tabs">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Item 1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 3</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Desativado</a>
+			</li>
+		</ul>
+		<h2>Pílulas</h2>
+		<p>Para fazer um menu em estilo de pílulas, adicione a class .nav-pills no &lt;ul&gt;.</p>
+		<ul class="nav nav-pills mb-2">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Item 1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 3</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Desativado</a>
+			</li>
+		</ul>
+
+		<h2>Abas/Pílulas Justificadas (mesma largura)</h2>
+		<p>Adicionando a class .nav-justified, teremos todas as navs com esta class da mesma largura.</p>
+
+		<h3>Nav1</h3>
+		<ul class="nav nav-pills nav-justified mb-2">
+			<li class="nav-item">
+				<a class="nav-link active" href="#">Item 1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 3</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Desativado</a>
+			</li>
+		</ul>
+		<h3>Nav2</h3>
+		<ul class="nav nav-tabs nav-justified">
+			<li class="nav-item">
+				<a class="nav-link active" href="#">Item 1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 3</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Desativado</a>
+			</li>
+		</ul>
+		<h2>Pílulas/Abas com Dropdown</h2>
+		<div class="jumbotron">
+			<h3>Informação</h3>
+			Este conteúdo tem como requisito saber sobre dropdown!<br/>
+			Veja sobre dropdown <a target="_blank" href="15-dropdown.html">clicando aqui!</a>
+		</div>
+		<h3>Pílulas</h3>
+		<ul class="nav nav-pills">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 1</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Item 2</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Item 2-1</a>
+					<a class="dropdown-item" href="#">Item 2-2</a>
+					<a class="dropdown-item" href="#">Item 2-3</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 3</a>
+			</li>
+		</ul>
+		<h3>Abas</h3>
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 1</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Item 2</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Item 2-1</a>
+					<a class="dropdown-item" href="#">Item 2-2</a>
+					<a class="dropdown-item" href="#">Item 2-3</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Item 3</a>
+			</li>
+		</ul>
+
+		<h2>Abas/Pílulas Dinâmicas</h2>
+		<p>Para fazer abas que alternam, siga os seguintes passos:</p>
+		<ul>
+			<li>Adicione o atributo <code>data-toggle="tab"</code> para cada link.</li>
+			<li>Adicione a class <code>.tab-pane</code> nas divs com id único, todas dentro de uma div com a class <code>.tab-content</code></li>
+		</ul>
+		<span>Se quiser fazer o efeito de fade-in/out, adicione a class <code>.fade</code> nas div com a class <code>.tab-pane</code></span>
+		<!--Tabs -->
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#tabmenu1">Menu 1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#tabmenu2">Menu 2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#tabmenu3">Menu 3</a>
+			</li>
+		</ul>
+		<!--Tab panes-->
+		<div class="tab-content">
+			<div class="tab-pane container active" id="tabmenu1">
+				<h3>Menu 1</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="tab-pane container fade" id="tabmenu2">
+				<h3>Menu 2</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="tab-pane container fade" id="tabmenu3">
+				<h3>Menu 3</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, quisquam beatae nemo voluptate ut. Doloribus minus iusto dolorum, dolore tempore quae ducimus quod, labore harum modi cum debitis accusantium nulla.</p>
+			</div>
+		</div>
+		<!--Exemplo-->
+		<button type="button" class="btn btn-success m-3" data-target="#exemplo2" data-toggle="collapse">Mostrar código</button>
+		<div class="container bg-dark px-4 pt-2 my-2 collapse" id="exemplo2">
+			<span class="text-light">Código</span>
+
+			<code><pre style="font-size: 13pt;" class="text-light">
+&lt;!--Tabs --&gt;
+&lt;ul class="nav nav-tabs"&gt;
+	&lt;li class="nav-item"&gt;
+		&lt;a class="nav-link active" data-toggle="tab" href="#tabmenu1"&gt;Menu 1&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class="nav-item"&gt;
+		&lt;a class="nav-link" data-toggle="tab" href="#tabmenu2"&gt;Menu 2&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class="nav-item"&gt;
+		&lt;a class="nav-link" data-toggle="tab" href="#tabmenu3"&gt;Menu 3&lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--Tab panes--&gt;
+&lt;div class="tab-content"&gt;
+	&lt;div class="tab-pane container active" id="tabmenu1"&gt;
+		&lt;h3&gt;Menu 1&lt;/h3&gt;
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class="tab-pane container fade" id="tabmenu2"&gt;
+		&lt;h3&gt;Menu 2&lt;/h3&gt;
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class="tab-pane container fade" id="tabmenu3"&gt;
+		&lt;h3&gt;Menu 3&lt;/h3&gt;
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+		 quisquam beatae nemo voluptate ut. Doloribus minus iusto dolorum, dolore
+		 tempore quae ducimus quod, labore harum modi cum debitis accusantium nulla.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+			</pre></code>
+		</div>
+		<!-- fim exemplo -->
+		<hr>
+		<!--Tabs -->
+		<ul class="nav nav-pills">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#pillsmenu1">Menu 1</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#pillsmenu2">Menu 2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#pillsmenu3">Menu 3</a>
+			</li>
+		</ul>
+
+		<!--Tab panes-->
+		<div class="tab-content">
+			<div class="tab-pane container active" id="pillsmenu1">
+				<h3>Menu 1</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="tab-pane container fade" id="pillsmenu2">
+				<h3>Menu 2</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="tab-pane container fade" id="pillsmenu3">
+				<h3>Menu 3</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, quisquam beatae nemo voluptate ut. Doloribus minus iusto dolorum, dolore tempore quae ducimus quod, labore harum modi cum debitis accusantium nulla.</p>
+			</div>
+		</div>
+
+		<!--Exemplo-->
+		<button type="button" class="btn btn-success m-3" data-target="#exemplo3" data-toggle="collapse">Mostrar código</button>
+		<div class="container bg-dark px-4 pt-2 my-2 collapse" id="exemplo3">
+			<span class="text-light">Código</span>
+
+			<code><pre style="font-size: 13pt;" class="text-light">
+&lt;!--Tabs --&gt;
+&lt;ul class="nav nav-pills"&gt;
+	&lt;li class="nav-item"&gt;
+		&lt;a class="nav-link active" data-toggle="tab" href="#tabmenu1"&gt;Menu 1&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class="nav-item"&gt;
+		&lt;a class="nav-link" data-toggle="tab" href="#tabmenu2"&gt;Menu 2&lt;/a&gt;
+	&lt;/li&gt;
+	&lt;li class="nav-item"&gt;
+		&lt;a class="nav-link" data-toggle="tab" href="#tabmenu3"&gt;Menu 3&lt;/a&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--Tab panes--&gt;
+&lt;div class="tab-content"&gt;
+	&lt;div class="tab-pane container active" id="tabmenu1"&gt;
+		&lt;h3&gt;Menu 1&lt;/h3&gt;
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class="tab-pane container fade" id="tabmenu2"&gt;
+		&lt;h3&gt;Menu 2&lt;/h3&gt;
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class="tab-pane container fade" id="tabmenu3"&gt;
+		&lt;h3&gt;Menu 3&lt;/h3&gt;
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
+		quisquam beatae nemo voluptate ut. Doloribus minus iusto dolorum, dolore
+		tempore quae ducimus quod, labore harum modi cum debitis accusantium nulla.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+			</pre></code>
+		</div>
+		<!-- fim exemplo -->
+	</article>
+	<script type="text/javascript" src="_js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="_js/popper.min.js"></script>
+	<script type="text/javascript" src="_js/bootstrap.js"></script>
+</body>
+</html>

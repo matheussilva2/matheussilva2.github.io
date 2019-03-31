@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bootstrap - Formulários</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="_css/bootstrap.css">
+	<link rel="stylesheet" href="_css/style.css">
+</head>
+<body>
+	<header class="navbar bg-bootstrap">
+		<a class="navbar-brand text-light" href="#">Bootstrap 4</a>
+	</header>
+	<main class="container bg-light my-2 py-2 px-5">
+		<h1>Formulários</h1>
+		<p>Por padrão, o bootstrap trás estilizações para formulários. Os elementos <code>input</code>, <code>textarea</code> e <code>select</code> carregam a class <code>.form-control</code></p>
+		<h2>Layout de formulários</h2>
+		<p>O bootstrap possui dois tipos de layout de formulários:</p>
+		<ul>
+			<li>Formulário em empilhado (largura completo)</li>
+			<li>Linear</li>
+		</ul>
+
+		<hr>
+		<h2>Formulário Empilhado</h2>
+		<p>Neste estilo de formulário, crie um <code>div.form-group</code>. Cada .form-group indica um elemento da pilha.</p>
+		<form action="#">
+			<div class="form-group">
+				<label for="email">Email: </label>
+				<input type="email" class="form-control" id="email">
+			</div>
+			<div class="form-group">
+				<label for="pwd">Senha: </label>
+				<input type="password" class="form-control" id="pwd">
+			</div>
+			<div class="form-group form-check">
+				<label class="form-check-label">
+					<input type="checkbox" class="form-check-input"> Lembrar Senha
+				</label>
+			</div>
+			<button type="submit" class="btn btn-success">Submit</button>
+		</form>
+	<!--Exemplo-->
+		<button type="button" class="btn btn-bootstrap text-white my-3" data-target="#exemplo1" data-toggle="collapse">Mostrar código</button>
+		<div class="container bg-dark px-4 pt-2 my-2 collapse" id="exemplo1">
+			<span class="text-light">Código</span>
+
+			<code><pre style="font-size: 13pt;" class="text-light">
+&lt;form action="#"&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label for="email"&gt;Email: &lt;/label&gt;
+		&lt;input type="email" class="form-control" id="email"&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label for="pwd"&gt;Senha: &lt;/label&gt;
+		&lt;input type="password" class="form-control" id="pwd"&gt;
+	&lt;/div&gt;
+	&lt;div class="form-group form-check"&gt;
+		&lt;label class="form-check-label"&gt;
+			&lt;input type="checkbox" class="form-check-input"&gt; Lembrar Senha
+		&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+				</pre></code>
+		</div>
+	<!-- fim exemplo -->
+		<hr>
+		<h2>Formulário Linear</h2>
+		<p>Para fazer um formulário linear, adicione a class <code>.form-inline</code>.</p>
+		<strong>OBS: Este layout apenas funciona em telas maiores do que 576px de largura. Em telas menores, o formulário será empilhado verticalmente.</strong>
+		<form action="#" class="form-inline">
+			<label for="email">Email: </label>
+			<input type="email" class="form-control" id="email">
+			<label for="pwd">Senha: </label>
+			<input type="password" class="form-control" id="pwd">
+			<div class="form-check">
+				<label class="form-check-label">
+					<input type="checkbox" class="form-check-input">Lembrar Senha
+				</label>
+			</div>
+			<button type="submit" class="btn btn-success">Enviar</button>
+		</form>
+
+	<!--Exemplo-->
+		<button type="button" class="btn btn-bootstrap text-light my-3" data-target="#exemplo2" data-toggle="collapse">Mostrar código</button>
+		<div class="container bg-dark px-4 pt-2 my-2 collapse" id="exemplo2">
+			<span class="text-light">Código</span>
+
+			<code><pre style="font-size: 13pt;" class="text-light">
+&lt;form action="#" class="form-inline"&gt;
+	&lt;label for="email"&gt;Email: &lt;/label&gt;
+	&lt;input type="email" class="form-control" id="email"&gt;
+	&lt;label for="pwd"&gt;Senha: &lt;/label&gt;
+	&lt;input type="password" class="form-control" id="pwd"&gt;
+	&lt;div class="form-check"&gt;
+		&lt;label class="form-check-label"&gt;
+			&lt;input type="checkbox" class="form-check-input"&gt;Lembrar Senha
+		&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;button type="submit" class="btn btn-bootstrap text-white"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+				</pre></code>
+		</div>
+	<!-- fim exemplo -->
+
+		<hr>
+
+		<h2>Formulário Linear com Utilidades</h2>
+		<p>O formulário linear parece um pouco "comprimido". No exemplo a seguir, adiciono uma margem à direita para todos os dispositivos e uma margem embaixo para caso não houver espaço suficiente, ser mostrado verticalmente (<code>.mb-2 .mr-sm-2</code>).</p>
+		<form action="#" class="form-inline">
+			<label for="email" class="mr-sm-2">Email: </label>
+			<input type="email" id="email" class="form-control mb-2 mr-sm-2">
+			<label for="pwd" class="mr-sm-2">Senha: </label>
+			<input type="password" id="pwd" class="form-control mr-sm-2 mb-2">
+			<div class="form-check mb-2 mr-sm-2">
+				<label class="form-check-label">
+					<input type="checkbox" class="form-check-input">Lembrar Senha
+				</label>
+			</div>
+			<button class="btn btn-success mb-2">Enviar</button>
+		</form>
+	<!--Exemplo-->
+		<button type="button" class="btn btn-bootstrap text-light my-3" data-target="#exemplo3" data-toggle="collapse">Mostrar código</button>
+		<div class="container bg-dark px-4 pt-2 my-2 collapse" id="exemplo3">
+			<span class="text-light">Código</span>
+
+			<code><pre style="font-size: 13pt;" class="text-light">
+&lt;form action="#" class="form-inline"&gt;
+	&lt;label for="email" class="mr-sm-2"&gt;Email: &lt;/label&gt;
+	&lt;input type="email" id="email" class="form-control mb-2 mr-sm-2"&gt;
+	&lt;label for="pwd" class="mr-sm-2"&gt;Senha: &lt;/label&gt;
+	&lt;input type="password" id="pwd" class="form-control mr-sm-2 mb-2"&gt;
+	&lt;div class="form-check mb-2 mr-sm-2"&gt;
+		&lt;label class="form-check-label"&gt;
+			&lt;input type="checkbox" class="form-check-input"&gt;Lembrar Senha
+		&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;button class="btn btn-success mb-2"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+				</pre></code>
+		</div>
+	<!-- fim exemplo -->
+	</main>
+
+	<script type="text/javascript" src="_js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="_js/popper.min.js"></script>
+	<script type="text/javascript" src="_js/bootstrap.js"></script>
+</body>
+</html>

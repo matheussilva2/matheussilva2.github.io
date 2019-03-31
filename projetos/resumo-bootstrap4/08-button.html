@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap 4 - Buttons</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="_css/bootstrap.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+</head>
+<body class="container bg-white">
+	<header class="container-fluid text-light text-sm-center bg-dark">
+		<h1>Bootstrap 4 - Buttons</h1>
+	</header>
+	<main>
+	<section>
+		<header>
+			<h1>Botões</h1>
+		</header>
+		<div class="container bg-light mt-4 mb-4">
+			<h2>Estilos de Botões</h2>
+			<p>O bootstrap oferece quatro tipos de botões:</p>
+			<button type="button" class="btn">.btn (basico)</button>
+			<button type="button" class="btn btn-primary">.btn-Primary</button>
+			<button type="button" class="btn btn-secondary">.btn-Secondary</button>
+			<button type="button" class="btn btn-success">.btn-Success</button>
+			<button type="button" class="btn btn-info">.btn-Info</button>
+			<button type="button" class="btn btn-warning">.btn-Warning</button>
+			<button type="button" class="btn btn-danger">.btn-Danger</button>
+			<button type="button" class="btn btn-dark">.btn-Dark</button>
+			<button type="button" class="btn btn-light">.btn-Light</button>
+			<button type="button" class="btn btn-link">.btn-link</button>
+		</div>
+		<div class="container bg-light mt-4 mb-4">
+			<h2>Button Outline</h2>
+			<p>Os botões outline contém linhas apenas em suas bordas: btn-outline-*</p>
+			<button type="button" class="btn btn-outline-primary">.btn-outline-Primary</button>
+			<button type="button" class="btn btn-outline-secondary">.btn-outline-Secondary</button>
+			<button type="button" class="btn btn-outline-success">.btn-outline-Success</button>
+			<button type="button" class="btn btn-outline-info">.btn-outline-Info</button>
+			<button type="button" class="btn btn-outline-warning">.btn-outline-Warning</button>
+			<button type="button" class="btn btn-outline-danger">.btn-outline-Danger</button>
+			<button type="button" class="btn btn-outline-dark">.btn-outline-Dark</button>
+			<button type="button" class="btn btn-outline-light">.btn-outline-Light</button>
+		</div>
+		<div class="container bg-light mt-4 mb-4">
+			<h2>Tamanho de Botões</h2>
+			<p>O Bootstrap 4 oferece dois tamanho de botões: .btn-sm e .btn-lg</p>
+			<button type="button" class="btn btn-primary btn-lg">Large(lg)</button>
+			<button type="button" class="btn btn-primary">Normal</button>
+			<button type="button" class="btn btn-primary btn-sm">Small(sm)</button>
+		</div>
+		<div class="container bg-light mt-4 mb-4">
+			<h2>Botões em bloco</h2>
+			<p>A class .btn-block faz com que o botão seja exibido em block (Neste caso, ocupará toda largura do container)</p>
+			<button type="button" class="btn btn-primary btn-block">Botão exemplo</button>
+		</div>
+		<div class="container bg-light mt-4 mb-4">
+			<h2>Active e Disabled</h2>
+			<p>A class .active faz parecer com que o botão esteja pressionado e o atributo disabled faz com que o botão seja inclicável. A tag &lt;a&gt; não suporta o atributo disabled, então a class .disabled faz o link parecer desativado.</p>
+			<button type="button" class="btn btn-primary active">ativo</button>
+			<button type="button" class="btn btn-primary" disabled>desativado</button>
+			<a href="#" class="btn btn-link disabled">Link desativado</a>
+		</div>
+		<div class="container bg-light mt-4 mb-4">
+			<h2>Botões com Spinner</h2>
+			<p>Você pode adicionar spinners no botão (mais informações sobre spinners posteriormente).</p>
+			<button type="button" class="btn btn-primary">
+				<span class="spinner-border spinner-border-sm"></span>
+			</button>
+			<button type="button" class="btn btn-primary">
+				<span class="spinner-border spinner-border-sm"></span>
+				Carregando...
+			</button>
+			<button type="button" class="btn btn-primary" disabled>
+				<span class="spinner-border spinner-border-sm"></span>
+				Carregando
+			</button>
+			<button type="button" class="btn btn-primary">
+				<span class="spinner-grow spinner-grow-sm"></span>
+				Loading
+			</button>
+		</div>
+	</section>
+	<section>
+		<header><h1>Grupo de Botões</h1></header>
+		<div class="container bg-light mt-4 mb-4">
+			<p>Para fazer um grupo de botões, é usado a class .btn-group</p>
+			<div class="btn-group">
+				<button class="btn btn-primary">Apple</button>
+				<button class="btn btn-primary">Samsung</button>
+				<button class="btn btn-primary">Sony</button>
+			</div>
+			<h2>.btn-group.sm e lg</h2>
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-primary">Apple</button>
+				<button type="button" class="btn btn-primary">Samsung</button>
+				<button type="button" class="btn btn-primary">Sony</button>
+			</div><br><br>
+			<div class="btn-group btn-group-lg">
+				<button type="button" class="btn btn-primary">Apple</button>
+				<button type="button" class="btn btn-primary">Samsung</button>
+				<button type="button" class="btn btn-primary">Sony</button>
+			</div>
+		</div>
+		<div class="container bg-light mt-4 mb-4">
+			<h2>Grupo de botões vertical</h2>
+			<div class="btn-group-vertical">
+				<button type="button" class="btn btn-primary">Apple</button>
+				<button type="button" class="btn btn-primary">Samsung</button>
+				<button type="button" class="btn btn-primary">Sony</button>
+			</div>
+		</div>
+	</section>
+	<section>
+		<header>
+			<h1>Botões e dropdown menu</h1>
+		</header>
+		<p>Para juntar botões e dropdown menu, deve ser usado a class .dropdown-toggle e a propriedade data-toggle='dropdown'</p>
+		<div class="btn-group">
+			<button type="button" class="btn btn-dark">Apple</button>
+			<button type="button" class="btn btn-dark">Samsung</button>
+			<div class="btn-group">
+			<button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+					Sony
+				</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Tablet</a>
+					<a class="dropdown-item" href="#">Smartphone</a>
+				</div>
+			</div>
+		</div>
+		<div class="jumbotron-fluid">
+			<h3>Informação</h3>
+			<p>Aprenderemos sobre dropdown menu posteriormente</p>
+		</div>
+	</section>
+	</main>
+
+	<script src="_js/jquery-3.3.1.js"></script>
+	<script src="_js/popper.min.js"></script>
+	<script src="_js/bootstrap.js"></script>
+</body>
+</html>

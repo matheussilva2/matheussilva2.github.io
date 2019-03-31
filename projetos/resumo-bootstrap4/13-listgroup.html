@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap 4 - List Group</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="_css/bootstrap.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+</head>
+<body class="bg-white">
+	<header class="container-fluid pt-2">
+		<h2 class="text-sm-center">Grupo de listas</h2>
+	</header>
+	<main class="container mb-4">
+		<div class="container-fluid bg-light">
+			<h2>Grupo de Listas Básico</h2>
+			<p>O tipo de grupo de lista mais básico é usando um &lt;ul&gt; e &lt;li&gt;. Para criar um grupo de listas, deve ser aplicado a class .list-group e .list-group-item.</p>
+			<p>Você pode aplicar a class .active para ativar um item</p>
+			<ul class="list-group">
+				<li class="list-group-item">Primeiro Item</li>
+				<li class="list-group-item">Segundo Item</li>
+				<li class="list-group-item">Terceiro Item</li>
+				<li class="list-group-item active">Quarto Item</li>
+			</ul>
+		</div>
+		<div class="container-fluid mb-2 mt-2 bg-light">
+			<h2>Grupo de lista com links</h2>
+			<p>Para fazer este tipo de lista, deve aplicar a class .list-group-item a um elemento &lt;a&gt; juntamente com a class .list-group-item-action</p>
+			<p>Você pode aplicar a class .disabled para desativar um item.</p>
+			<div class="list-group">
+				<a class="list-group-item list-group-item-action" href="#">Primeiro Item</a>
+				<a class="list-group-item list-group-item-action" href="#">Segundo Item</a>
+				<a class="list-group-item list-group-item-action" href="#">Terceiro Item</a>
+				<a class="list-group-item list-group-item-action disabled" href="#">Quarto Item</a>
+			</div>
+		</div>
+		<div class="container-fluid mb-2 mt-2 bg-light">
+			<h2>Flush / Remover Bordas</h2>
+			<p>Você pode aplicar a class .list-group-flush para criar um grupo de lista sem borda.</p>
+			<div class="list-group list-group-flush">
+				<li class="list-group-item">Primeiro Item</li>
+				<li class="list-group-item active">Segundo Item</li>
+				<li class="list-group-item">Terceiro Item</li>
+				<li class="list-group-item disabled">Quarto Item</li>
+			</div>
+		</div>
+		<div class="container-fluid mb-2 mt-2 bg-light">
+			<h2>Grupo de listas horizontal</h2>
+			<p>Para fazer um groupo de lista horizontal, deve ser aplicado a class .list-group-horizontal</p>
+			<ul class="list-group list-group-horizontal">
+				<li class="list-group-item">Primeiro Item</li>
+				<li class="list-group-item">Segundo Item</li>
+				<li class="list-group-item">Terceiro Item</li>
+			</ul>
+		</div>
+		<div class="container-fluid mb-2 mt-2 bg-light">
+			<h2>Classes Contextuais em Grupo de Listas</h2>
+			<p>Através da class .list-group-item-* é colocado um contexto no item. <span class="text-info font-italic">Veja sobre os contextos <a href="07-alerts.html">clicando aqui</a></span></p>
+			<ul class="list-group">
+				<li class="list-group-item list-group-item-primary">Primary</li>
+				<li class="list-group-item list-group-item-success">Success</li>
+				<li class="list-group-item list-group-item-danger">Danger</li>
+				<li class="list-group-item list-group-item-warning">Warning</li>
+			</ul><br/>
+			<h2>Item de Grupo de Listas com Contexto e Link</h2>
+			<div class="list-group-item">
+				<a href="#" class="list-group-item list-group-item-primary list-group-item-action">Primary</a>
+				<a href="#" class="list-group-item list-group-item-secondary list-group-item-action">Secondary</a>
+				<a href="#" class="list-group-item list-group-item-warning list-group-item-action">Warning</a>
+			</div>
+		</div>
+		<div class="container-fluid mb-2 mt-2 bg-light">
+			<h2>Grupo de Lista com Badge</h2>
+			<p>Também é possível criar grupo de listas com badges. <span class="text-info font-italic">Veja sobre badges <a href="09-badges.html">clicando aqui</a></span></p>
+			<ul class="list-group">
+				<li class="list-group-item d-flex justify-content-between align-items-center">Notificações <span class="badge badge-primary badge-pill">5</span></li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">Mensagens <span class="badge badge-primary badge-pill">25</span></li>
+				<li class="list-group-item d-flex justify-content-between align-items-center">Amizades <span class="badge badge-primary badge-pill">2</span></li>
+			</ul>
+		</div>
+	</main>
+</body>
+</html>

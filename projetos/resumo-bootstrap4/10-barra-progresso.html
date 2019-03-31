@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap 4 - Barra de Progresso</title>
+	<link rel="stylesheet" href="_css/bootstrap.css"/>
+</head>
+<body class="bg-light">
+	<header class="container-fluid bg-primary">
+		<h1 class="text-white text-sm-center display-4">Bootstrap 4 - Barra de Progresso</h1>
+	</header>
+	<section class="container bg-white mb-2 mt-2">
+		<header>
+			<h2>Barra de progresso básica</h2>
+		</header>
+		<p>Uma barra de progresso básica é criada pelas classes .progress e dentro da div uma outra com .progress-bar. Você pode usar a propriedade CSS <strong>width</strong> para mudar a porcentagem da barra.</p>
+		<div class="progress">
+			<div class="progress-bar" style="width: 70%"></div>
+		</div>
+	</section>
+	<section class="container bg-white mb-2 mt-2">
+		<header><h2>Altura da Barra</h2></header>
+		<p>A altura da barra é definida pela propriedade CSS heigth (por padrão, ela vem em 16px).</p>
+		<div class="progress" style="height: 10px">
+			<div class="progress-bar" style="width: 60%;"></div>
+		</div><br/>
+		<div class="progress" style="height: 15px">
+			<div class="progress-bar" style="width: 20%;"></div>
+		</div><br/>
+		<div class="progress" style="height: 20px">
+			<div class="progress-bar" style="width: 85%;"></div>
+		</div>
+	</section>
+	<section class="container bg-white mb-2 mt-2">
+		<header>
+			<h2>Label de Barra de Progresso</h2>
+		</header>
+		<p>Você pode colocar textos dentro da barra.</p>
+		<div class="progress">
+			<div class="progress-bar" style="width: 30%">30%</div>
+		</div><br/>
+		<div class="progress" style="height: 20px">
+			<div class="progress-bar" style="width: 45%">Carregando...</div>
+		</div>
+	</section>
+	<section class="container bg-white mb-2 mt-2">
+		<header>
+			<h2>Barras coloridas</h2>
+		</header>
+			<p>Por padrão, a barra tem um fundo azul. Você pode trocar pela class bg-*</p>
+			<div class="progress">
+				<div class="progress-bar bg-warning" style="width: 30%"></div>
+			</div>
+			<br>
+			<div class="progress">
+				<div class="progress-bar bg-danger" style="width: 15%">
+			</div>
+	</section>
+	<section class="container bg-white mb-2 mt-2">
+		<header>
+			<h2>Stripped Bars</h2>
+		</header>
+		<p>São barras mais bonitinhas rs. Você pode fazer usando a class .progress-bar-striped</p>
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped bg-success" style="width: 86%"></div>
+		</div>
+	</section><br/>
+	<section class="container bg-white mb-2 mt-2">
+		<header>
+			<h2>Barras animadas <span class="text-danger">♥</h2>
+		</header>
+		<p>Para fazer barras animadas, é só usar a class .progress-bar-animated (Não é necessário usar bootstrap.js, jquery e popper)</p>
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 50%;"></div>
+		</div>
+	</section>
+	<section class="container bg-white mb-2 mt-2">
+		<header>
+			<h2>Multiplas barras</h2>
+		</header>
+		<p>Você pode criar várias barras dentro de um único div.progress</p>
+		<div class="progress">
+			<div class="progress-bar bg-success" style="width: 30%;">Espaço Livre</div>
+			<div class="progress-bar bg-dark" style="width: 30%">Espaço Usado</div>
+			<div class="progress-bar progress-bar-striped bg-dark" style="width: 40%">Não Alocado</div>
+		</div>
+	</section>
+</body>
+</html>

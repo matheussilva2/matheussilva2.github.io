@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap 4 - Navbars</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="_css/bootstrap.css"/>
+</head>
+<body>
+	<header>
+		<nav class="navbar bg-success navbar-dark navbar-expand-md">
+			<a href="#" class="navbar-brand">Matheus Silva</a>
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="nav-link">Início</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<article class="container bg-light my-3 py-4">
+		<h1>Navbars - Bootstrap 4</h1>
+		<h2>Navbar Básico</h2>
+		<p>Siga os seguintes passos para criar um navbar básico: </p>
+		<ul>
+			<li>Crie um div.navbar..navbar-expand.xl|lg|md|sm (o expand define em qual tamanho de tela o navbar vai se expandir. Se a tela for menor, ele vai collapsar)</li>
+		</ul>
+		<div class="navbar navbar-expand-md bg-white">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="nav-link">Item 1</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Item 2</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Item 3</a>
+				</li>
+			</ul>
+		</div>
+			<!--Exemplo-->
+			<button type="button" class="btn btn-success m-3" data-target="#exemplo-nav" data-toggle="collapse">Mostrar código</button>
+			<div class="container bg-dark px-4 pt-2 my-2 collapse" id="exemplo-nav">
+
+				<span class="text-light">Código</span>
+
+				<code><pre style="font-size: 13pt;" class="text-light">
+&lt;div class="navbar navbar-expand-md bg-white"&gt;
+	&lt;ul class="navbar-nav"&gt;
+		&lt;li class="nav-item"&gt;
+			&lt;a href="#" class="nav-link"&gt;Item 1&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class="nav-item"&gt;
+			&lt;a href="#" class="nav-link"&gt;Item 2&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class="nav-item"&gt;
+			&lt;a href="#" class="nav-link"&gt;Item 3&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+				</pre></code>
+		</div>
+		<!-- fim exemplo -->
+		<hr>
+		<h2>Navbar Vertical</h2>
+		<p>Remova a class .navbar-expand.xl|lg|md|sm e seu navbar ficará vertical.</p>
+		<div class="navbar bg-white">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="nav-link">Item 1</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Item 2</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Item 3</a>
+				</li>
+			</ul>
+		</div>
+		<hr>
+		<h2>Navbar Centralizada</h2>
+		<p>Para centralizar uma navbar, adicione a class .justify-content-center na barra de navegação.</p>
+		<nav class="navbar navbar-expand-sm bg-white justify-content-center">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="nav-link">Item 1</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Item 2</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Item 3</a>
+				</li>
+			</ul>
+		</nav>
+			<!--Exemplo-->
+			<button type="button" class="btn btn-success m-3" data-target="#exemplo2-nav" data-toggle="collapse">Mostrar código</button>
+			<div class="container bg-dark px-4 pt-2 my-2 collapse" id="exemplo2-nav">
+				<span class="text-light">Código</span>
+
+				<code><pre style="font-size: 13pt;" class="text-light">
+&lt;nav class="navbar navbar-expand-sm bg-white justify-content-center"&gt;
+	&lt;ul class="navbar-nav"&gt;
+		&lt;li class="nav-item"&gt;
+			&lt;a href="#" class="nav-link"&gt;Item 1&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class="nav-item"&gt;
+			&lt;a href="#" class="nav-link"&gt;Item 2&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class="nav-item"&gt;
+			&lt;a href="#" class="nav-link"&gt;Item 3&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+				</pre></code>
+			</div>
+		<!-- fim exemplo -->
+		<hr>
+		<h2>Navbar Colorida</h2>
+		<p>Para colorir uma navbar, adicione qualquer class de cor de background para colorir um navbar (bg-*). <a href="03-cores.html" target="_blank">Clique aqui para ver sobre cores.</a></p>
+		<p class="text-secondary">Dica: adicione a cor branca ou preta para todos os textos do navbar adicionando a class .navbar-dark ou .navbar-light</p>
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="nav-link">Link 1</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Link 2</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Link 3</a>
+				</li>
+			</ul>
+		</nav>
+		<hr>
+		<h2>Logomarca</h2>
+		<p>Para adicionar uma logomarca no seu menu de navegação adicione um link com a class .navbar-brand. Você pode adicionar um img dentro do link da brand para ficar apenas a imagem.</p>
+		<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+			<a href="#" class="navbar-brand">Logomarca</a>
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="nav-link">Link 1</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Link 2</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">Link 3</a>
+				</li>
+			</ul>
+		</nav>
+		<hr>
+		<h2>Collapsando Navbar</h2>
+		<p>Este formato de navbar é geralmente utilizados para telas pequenas.</p>
+		<ol>
+			<li>Crie um button.navbar-toggler com o atributo data-toggle="collapse" e data-target="#navbar-alvo"</li>
+			<li>Adicione a class .collapse .navbar-collapse em uma div que isola a lista de links</li>
+		</ol>
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+			<!-- Logomarca -->
+			<a href="#" class="navbar-brand">Logomarca</a>
+
+			<!-- Botão para collapsar -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navAlvo1">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!-- Navbar links -->
+			<div class="collapse navbar-collapse" id="navAlvo1">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a href="#" class="nav-link">Link 1</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Link 2</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Link 3</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+			<!--Exemplo-->
+			<button type="button" class="btn btn-success m-3" data-target="#exemplo2-nav" data-toggle="collapse">Mostrar código</button>
+			<div class="container bg-dark px-4 pt-2 my-2 collapse" id="exemplo2-nav">
+				<span class="text-light">Código</span>
+
+				<code><pre style="font-size: 13pt;" class="text-light">
+&lt;nav class="navbar navbar-expand-md bg-dark navbar-dark"&gt;
+	&lt;!-- Logomarca --&gt;
+	&lt;a href="#" class="navbar-brand"&gt;Logomarca&lt;/a&gt;
+
+	&lt;!-- Botão para collapsar --&gt;
+	&lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navAlvo1"&gt;
+		&lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+	&lt;/button&gt;
+
+	&lt;!-- Navbar links --&gt;
+	&lt;div class="collapse navbar-collapse" id="navAlvo1"&gt;
+		&lt;ul class="navbar-nav"&gt;
+			&lt;li class="nav-item"&gt;
+				&lt;a href="#" class="nav-link"&gt;Link 1&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li class="nav-item"&gt;
+				&lt;a href="#" class="nav-link"&gt;Link 2&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li class="nav-item"&gt;
+				&lt;a href="#" class="nav-link"&gt;Link 3&lt;/a&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/nav&gt;
+				</pre></code>
+			</div>
+		<!-- fim exemplo -->
+		<hr>
+		<h2>Navbar com dropdown</h2>
+		<p>Você pode adicionar um navbar-item sendo um toggler de um dropdown. <a href="15-dropdown.html" target="_blank">Clique aqui para ver sobre dropdown.</a></p>
+
+		<h2>Formulários Navbar e Botões</h2>
+		<p>Apenas adicione um &lt;form&gt; dentro do navbar. <span class="text-danger font-weight-bold">Isto toma como pré-requisito o conhecimento de html básico!</span></p>
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+			<form class="form-inline" action="#">
+				<input type="text" class="form-control mr-sm-2" placeholder="Procurar" />
+				<button class="btn btn-success" type="submit">Procurar</button>
+			</form>
+		</nav>
+		<p>Você podem também pode adicionar as classes <code>.input-group-prepend</code> ou <code>.input-group-append</code> para colocar um item ou texto de ajuda próximo ao campo de entrada.</p>
+		<span class="text-info">Aprenderemos sobre os inputs do Bootstrap futuramente.</span>
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+			<form action="#" class="form-inline">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">@</span>
+					</div>
+					<input type="text" class="form-control" placeholder="Usuário">
+				</div>
+			</form>
+		</nav>
+		<hr>
+		<h2>Textos de Navbar</h2>
+		<p>Apenas adicione um .navbar-text a um span dentro dos itens.</p>
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+		<!-- Links -->
+		  <ul class="navbar-nav">
+		    <li class="nav-item">
+		      <a class="nav-link" href="#">Link 1</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="#">Link 2</a>
+		    </li>
+		  </ul>
+
+		  <!-- Navbar text-->
+		  <span class="navbar-text">
+		    Navbar text
+		  </span>
+		</nav>
+		<hr>
+		<h2>Navbar Fixa</h2>
+		<p>Apenas adicione a class <code>.fixed-top</code> ou <code>.fixed-bottom</code> para fixar a navbar no topo ou no final da página.</p>
+		<hr>
+		<h2>Navbar grudenta</h2>
+		<p>Apenas adicione a class <code>.sticky-top</code></p>
+	</article>
+	<script type="text/javascript" src="_js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="_js/popper.min.js"></script>
+	<script type="text/javascript" src="_js/bootstrap.js"></script>
+</body>
+</html>

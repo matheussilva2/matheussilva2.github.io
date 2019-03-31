@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Boostrap 4 - Dropdown</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="_css/bootstrap.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+</head>
+<body>
+	<header class="container-fluid bg-success">
+		<h1 class="text-white text-center">Bootstrap 4 - Dropdown</h1>
+	</header>
+	<article class="container bg-primary bg-light py-4 px-4">
+		<h2>Dropdown Básico</h2>
+		<div class="dropdown">
+			<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Botão Dropdown</button>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#">Opção 1</a>
+				<a class="dropdown-item" href="#">Opção 2</a>
+				<a class="dropdown-item" href="#">Opção 3</a>
+			</div>
+		</div>
+
+		<div class="container bg-dark my-2" style="border-radius: 4px;">
+			<pre><code class="text-light">
+&lt;div class="dropdown"&gt;
+	&lt;button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"&gt;Botão Dropdown&lt;/button&gt;
+	&lt;div class="dropdown-menu"&gt;
+		&lt;a class="dropdown-item" href="#"&gt;Opção 1&lt;/a&gt;
+		&lt;a class="dropdown-item" href="#"&gt;Opção 2&lt;/a&gt;
+		&lt;a class="dropdown-item" href="#"&gt;Opção 3&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+			</code></pre>
+		</div>
+		<ul class="list-unstyled">
+			<li>A class .dropdown indica que ali será um menu dropdown.</li>
+			<li>Para abrir um dropdown menu, use a class .dropdown-toggle e o atributo data-toggle="dropdown"</li>
+			<li>Adicione a class .dropdown-menu em uma div para construir o menu e então adicione a class .dropdown-item para cada item.</li>
+		</ul>
+		<hr>
+		<h2>Divisor dropdown</h2>
+		<p>Use a class .dropdown-divider para criar uma linha horizontal com bordas para criar um divisor.</p>
+		<code>&lt;div class="dropdown-divider"&gt;&lt;/div&gt;</code><br><br>
+		<div class="dropdown mb-3">
+			<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Abrir Menu</button>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#">Item 1</a>
+				<a class="dropdown-item" href="#">Item 2</a>
+				<a class="dropdown-item" href="#">Item 3</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Item 4</a>
+			</div>
+		</div>
+		<hr>
+		<h2>Dropdown Header</h2>
+		<p>Você pode colocar títulos no menu usando a class .dropdown-header</p>
+		<code>&lt;div class="dropdown-header"&gt;Titulo&lt;/div&gt;</code>
+		<div class="dropdown">
+			<button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Abrir Menu</button>
+			<div class="dropdown-menu">
+				<div class="dropdown-header">Título 1</div>
+				<a class="dropdown-item" href="#">Item 1</a>
+				<a class="dropdown-item active" href="#">Active</a>
+				<a class="dropdown-item" href="#">Item 3</a>
+				<div class="dropdown-header">Título 2</div>
+				<a class="dropdown-item" href="#">Item 1</a>
+				<a class="dropdown-item disabled" href="#">Disabled</a>
+				<a class="dropdown-item" href="#">Item 3</a>
+			</div>
+			<hr>
+			<h2>Posição do Dropdown</h2>
+			<p>Você pode aplicar a class .dropright ou .dropleft junto a class .dropdown para alinhar o dropdown menu</p>
+			<code>&lt;div class="dropdown dropright"&gt;</code><br>
+			<code>&lt;div class="dropdown dropleft"&gt;</code>
+			
+			<div class="dropdown float-right">
+			<button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Abrir Menu</button>
+			<div class="dropdown-menu">
+				<div class="dropdown-header">Título 1</div>
+				<a class="dropdown-item" href="#">Item 1</a>
+				<a class="dropdown-item active" href="#">Active</a>
+				<a class="dropdown-item" href="#">Item 3</a>
+				<div class="dropdown-header">Título 2</div>
+				<a class="dropdown-item" href="#">Item 1</a>
+				<a class="dropdown-item disabled" href="#">Disabled</a>
+				<a class="dropdown-item" href="#">Item 3</a>
+			</div>
+			</div>
+			<hr>
+		<h2>Dropdown à Direita</h2>
+		<p>Usando a class .dropdown-menu-right o dropdown será alinhado à direita do botão</p>
+		<div class="dropdown">
+			<button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Abrir Menu</button>
+			<div class="dropdown-menu dropdown-menu-right">
+				<div class="dropdown-header">Título 1</div>
+				<a class="dropdown-item" href="#">Item 1</a>
+				<a class="dropdown-item active" href="#">Active</a>
+				<a class="dropdown-item" href="#">Item 3</a>
+				<div class="dropdown-header">Título 2</div>
+				<a class="dropdown-item" href="#">Item 1</a>
+				<a class="dropdown-item disabled" href="#">Disabled</a>
+				<a class="dropdown-item" href="#">Item 3</a>
+			</div>
+		</div>
+
+		<hr>
+		<h2>Dropup</h2>
+		<p>Substituindo a class .dropdown por .dropup, o menu dropa pra cima.</p>
+		<code>&lt;div class="dropup"&gt;</code>
+		<div class="dropup">
+			<button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Abrir Menu</button>
+			<div class="dropdown-menu">
+				<div class="dropdown-header">Título 1</div>
+				<a class="dropdown-item" href="#">Item 1</a>
+				<a class="dropdown-item active" href="#">Active</a>
+				<a class="dropdown-item" href="#">Item 3</a>
+				<div class="dropdown-header">Título 2</div>
+				<a class="dropdown-item" href="#">Item 1</a>
+				<a class="dropdown-item disabled" href="#">Disabled</a>
+				<a class="dropdown-item" href="#">Item 3</a>
+			</div>
+		</div>
+		<hr>
+		<h2>Dropdown Text</h2>
+		<p>A class .dropdown-text é usada para colocar um texto no menu ou para adicionar um link com estilo padrão.</p>
+		<div class="dropdown">
+			<button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Abrir Menu</button>
+			<div class="dropdown-menu">
+				<div class="dropdown-header">Título 1</div>
+				<a class="dropdown-item" href="#">Item 1</a>
+				<a class="dropdown-item active" href="#">Active</a>
+				<a class="dropdown-item" href="#">Item 3</a>
+				<a class="dropdown-item-text" href="#">Link text</a>
+				<div class="dropdown-header">Título 2</div>
+				<a class="dropdown-item" href="#">Item 1</a>
+				<a class="dropdown-item disabled" href="#">Disabled</a>
+				<a class="dropdown-item" href="#">Item 3</a>
+				<span class="dropdown-item-text">Apenas um texto</span>
+			</div>
+		</div>
+		<hr>
+		<h2>Botões agrupados com drpodown</h2>
+		<p>Você pode misturar agrupamento de botões junto com dropdown menu. <a href="08-button.html">Clique aqui para ver sobre agrupamento de botões.</a></p>
+		<div class="btn-group">
+			<button type="button" class="btn btn-dark">Apple</button>
+			<button type="button" class="btn btn-dark">Samsung</button>
+			<div class="btn-group">
+				<button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">Sony</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item">Tablet</a>
+					<a class="dropdown-item">Smartphone</a>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Split Buttons Dropdown</h2>
+		<p>Este é um método de fazer dropdown menu com um botão comum e outro botão para fazer o dropdown de forma agrupada. Aplique a class .dropdown-toggle-split no botão de toggle.</p>
+		<div class="btn-group">
+			<button class="btn btn-primary">Botão</button>
+			<button class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+			<div class="dropdown-menu">
+				<a class="dropdown-item">Link 1</a>
+				<a class="dropdown-item">Link 2</a>
+			</div>
+		</div>
+		<hr>
+		<h2>Agrupamento de botões vertical com dropdown</h2>
+		<div class="btn-group-vertical">
+			<button type="button" class="btn btn-primary">Apple</button>
+			<button type="button" class="btn btn-primary">Samsung</button>
+			<div class="btn-group">
+				<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">Sony</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Tablet</a>
+					<a class="dropdown-item" href="#">Smartphone</a>
+				</div>
+			</div>
+		</div>
+	</article>
+	<script src="_js/jquery-3.3.1.js"></script>
+	<script src="_js/popper.min.js"></script>
+	<script src="_js/bootstrap.js"></script>
+</body>
+</html>

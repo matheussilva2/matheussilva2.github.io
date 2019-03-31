@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap 4 - Alerts</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="_css/bootstrap.css"/>
+</head>
+<body>
+	<header class="container-fluid bg-primary">
+		<h1 class="text-white text-center">Bootstrap 4 - Alerts</h1>
+	</header>
+	<main class="container bg-light">
+		<header class="container">
+			<h2 class="display-4">Alerts no Bootstrap 4</h2>
+		</header>
+		<div class="container">
+			<p>O Bootstrap 4 oferece classes que cria um alerta facilmente. Estas são: .alert .alert-* .alert-warning .alert-danger .warning-primary</p>
+			<div class="alert alert-success">
+				<strong>Sucesso!</strong> Este é um alerta de sucesso!
+			</div>
+			<div class="alert alert-warning">
+				<strong>Warning!</strong> Este é um alerta de aviso
+			</div>
+		</div>
+		<div class="container">
+			<h3>.alert-link</h3>
+			<p>A class .alert-link é usado para estilizar um elemento &lt;a&gt; de acordo com o tipo de alerta.</p>
+			<div class="alert alert-danger">
+				<strong>Perigo!</strong> Exemplo de alerta <a href="#" class="alert-link">com link</a>
+			</div>
+		</div>
+		<div class="container">
+			<h3>Alerta fechável</h3>
+			<p>Para criar um alerta fechável, você precisa adicionar a class .alert-dismissible no container de alert e a class .close num link ou botão + o atributo <strong>data-dismiss="alert"</strong></p>
+			<div class="jumbotron">
+				<h4 class="text-info">Observação!</h4>
+				<p>Para esta classe funciona, os scripts JQuery, popper e bootstrap precisam estar importados (em ordem respectiva).</p>
+			</div>
+			<div class="alert alert-info alert-dismissible">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<strong>Informação!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing
+			</div>
+		</div>
+		<div class="container">
+			<h3>Alerta animado</h3>
+			<p>Para animar um alerta, colocamos a class .fade e .show</p>
+			<div class="alert alert-danger alert-dismissible fade show">
+				<strong>Alerta!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+			</div>
+		</div>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="_js/bootstrap.js"></script>
+
+</body>
+</html>

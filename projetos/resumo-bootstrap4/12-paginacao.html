@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap 4 - Paginação</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<link rel="stylesheet" href="_css/Bootstrap.css"/>
+</head>
+<body class="bg-white">
+	<header class="container-fluid bg-success mb-5">
+		<h1 class="text-center text-light">Bootstrap 4 - Paginação</h1>
+	</header>
+	<main class="bg-light container pt-4">
+		<section>
+			<header>
+				<h2>Paginação Básica</h2>
+			</header>
+			<p>Para criar uma paginação básica, aplique a class .pagination ao &lt;ul&gt; e .page-item para cada &lt;li&gt; e dentro do &lt;li&gt; coloque a class .page-link dentro do elemento &lt;a&gt;</p>
+			<ul class="pagination">
+				<li class="page-item"><a href="#" class="page-link">Anterior</a></li>
+				<li class="page-item"><a href="#" class="page-link">1</a></li>
+				<li class="page-item"><a href="#" class="page-link">2</a></li>
+				<li class="page-item"><a href="#" class="page-link">3</a></li>
+				<li class="page-item"><a href="#" class="page-link">Próximo</a></li>
+			</ul>
+			<h3>Estado Active</h3>
+			<p>A class .active serve para mostrar qual página o usuário está no momento. Ela é aplicada ao &lt;li&gt; </p>
+			<ul class="pagination">
+				<li class="page-item"><a href="#" class="page-link">Anterior</a></li>
+				<li class="page-item active"><a href="#" class="page-link">1</a></li>
+				<li class="page-item"><a href="#" class="page-link">2</a></li>
+				<li class="page-item"><a href="#" class="page-link">3</a></li>
+				<li class="page-item"><a href="#" class="page-link">Próximo</a></li>
+			</ul>
+			<h3>Estado Disabled</h3>
+			<p>A class .disabled desativa o item da paginação.</p>
+			<ul class="pagination">
+				<li class="page-item disabled"><a href="#" class="page-link">Anterior</a></li>
+				<li class="page-item"><a href="#" class="page-link">1</a></li>
+				<li class="page-item"><a href="#" class="page-link">2</a></li>
+				<li class="page-item"><a href="#" class="page-link">3</a></li>
+				<li class="page-item"><a href="#" class="page-link">Próximo</a></li>
+			</ul>
+			<h3>Tamanho da paginação</h3>
+			<p>Você pode alterar o tamanho da paginação através das classes .pagination-lg e .pagination-sm <span class="text-secondary">(O esquema de *-lg e *-sm já foi explicado <a href="08-button.html" target="_blank">aqui</a>)</span>.</p>
+			<ul class="pagination pagination-lg">
+				<li class="page-item"><a href="#" class="page-link">Anterior</a></li>
+				<li class="page-item"><a href="#" class="page-link">1</a></li>
+				<li class="page-item"><a href="#" class="page-link">2</a></li>
+				<li class="page-item"><a href="#" class="page-link">3</a></li>
+				<li class="page-item"><a href="#" class="page-link">Próximo</a></li>
+			</ul>
+			<ul class="pagination pagination-sm">
+				<li class="page-item"><a href="#" class="page-link">Anterior</a></li>
+				<li class="page-item"><a href="#" class="page-link">1</a></li>
+				<li class="page-item"><a href="#" class="page-link">2</a></li>
+				<li class="page-item"><a href="#" class="page-link">3</a></li>
+				<li class="page-item"><a href="#" class="page-link">Próximo</a></li>
+			</ul>
+		</section>
+		<hr/>
+		<section>
+			<header>
+				<h2>Breadcrumbs</h2>
+			</header>
+			<p>Esta é uma outra forma de paginação, ela mostra a localização do usuário no site, baseado em uma hierarquia. Para usar, aplique a class .breadcrumb e .breadcrumb-item <span class="text-secondary">(O raciocínio é o mesmo de .pagination)</span>.</p>
+			<ul class="breadcrumb">
+				<li class="breadcrumb-item"><a target="_blank" href=".">Treinamento Bootstrap 4</a></li>
+				<li class="breadcrumb-item active">Paginação</li>
+			</ul>
+		</section>
+	</main>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap 4 - Cards</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="_css/bootstrap.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+</head>
+<body>
+	<header class="container-fluid bg-primary">
+		<h1 style="font-size: 40px;" class="text-light text-sm-center">Bootstrap 4 - Cards</h1>
+	</header>
+	<article class="container bg-light mt-5 p-4">
+			<h2>O que são cards?</h2>
+			<p style="text-indent: 5%;">
+				O card é uma caixa com bordas e padding ao redor de seu conteúdo. Esta class permite adição de header, footer e conteúdos. 
+			</p>
+			<p>
+				Para criar um card básico, adicionamos a class .card a um div e .card-body em um div filho.
+			</p>
+			<!--Exemplo-->
+			<div class="container bg-white" style="margin: 16px #fff;">
+				<span class="font-weight-bold" style="font-size: 25px;">Exemplo</span>
+<pre><code>
+&lt;div class="card"&gt;
+	&lt;div class="card-body"&gt;Card básico&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+				<span class="font-weight-bold" style="font-size: 25px;">Resultado</span>
+				<div class="card">
+					<div class="card-body">Card básico</div>
+				</div>
+			</div>
+			<!--Fim exemplo-->
+			<br/>
+
+			<h2>Header, Body e Footer</h2>
+			<p>Nós podemos estruturar um card através das classes: .card-header, .card-body e .card-footer.</p>
+			<!-- Exemplos -->
+			<div class="container bg-white" style="margin: 16px #fff;">
+				<span class="font-weight-bold" style="font-size: 25px;">Exemplo</span>
+				<pre><code>
+&lt;div class="card"&gt;
+	&lt;div class="card-header"&gt;Cabeçalho&lt;/div&gt;
+	&lt;div class="card-body"&gt;Corpo&lt;/div&gt;
+	&lt;div class="card-footer"&gt;Rodapé&lt;/div&gt;
+&lt;/div&gt;
+				</code></pre>			
+				<span class="font-weight-bold" style="font-size: 25px;">Resultado</span>
+				<div class="card">
+					<div class="card-header">Cabeçalho</div>
+					<div class="card-body">Corpo</div>
+					<div class="card-footer">Rodapé</div>
+				</div>
+		</div><br/>
+			<!--Fim Exemplos-->
+
+			<h2>Cards Contextuais</h2>
+			<p>Podemos adicionar classes de background (.bg-*) para contextualizar os cards.</p>
+			<a target="_blank" href="07-alerts.html">Clique aqui para ver sobre contextos.</a>
+			<br><br>
+
+			<!--Exemplo-->
+			<span class="font-weight-bold" style="font-size: 25px;">Exemplo</span>
+			<pre><code>
+&lt;div class="card bg-primary text-white"&gt;
+	&lt;div class="card-body"&gt;Card Primary&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="card bg-warning text-white"&gt;
+	&lt;div class="card-body"&gt;Card Warning&lt;/div&gt;
+&lt;/div&gt;
+
+			</code></pre>
+			<span class="font-weight-bold" style="font-size: 25px;">Resultado</span>
+			<br><br>
+			<div class="container bg-white" style="margin: 16px #fff;">
+				<div class="card bg-primary text-white">
+					<div class="card-body">Card Primary</div>
+				</div>
+				<div class="card bg-warning text-white">
+					<div class="card-body">Card Warning</div>
+				</div>
+			</div>
+			<!--Fim exemplo-->
+
+			<h2>Títulos, textos e links</h2>
+			<p>Use a class .card-title em um elemento de cabeçalho. A class .card-text é usada para remover as margins inferiores se ele for o último elemento filho (ou o único) dentro de um .card-body. A class .card-link adiciona uma cor azul e um efeito de hover ao link.</p>
+			<!--Exemplo-->
+			<div class="container bg-white" style="margin: 16px #fff;">
+				<span class="font-weight-bold" style="font-size: 25px;">Exemplo</span>
+				<pre><code>
+&lt;div class="card"&gt;
+	&lt;div class="card-body"&gt;
+		&lt;h4 class="card-title"&gt;Título do Card&lt;/h4&gt;
+		&lt;p class="card-text"&gt;Lorem ipsum dolor&lt;/p&gt;
+		&lt;a class="card-link" href="#"&gt;Card Link&lt;/a&gt;
+		&lt;a class="card-link" href="#"&gt;Outro link&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+				</code></pre>
+				<div class="card">
+					<div class="card-body">
+						<h4 class="card-title">Título do Card</h4>
+						<p class="card-text">Lorem ipsum dolor</p>
+						<a class="card-link" href="#">Card Link</a>
+						<a class="card-link" href="#">Outro link</a>
+					</div>
+				</div>
+			</div>
+			<!--Fim exemplo-->
+
+			<h2>Imagens nos Cards</h2>
+			<p>Adicione a class .card-img-top ou .card-img-bottom em um &lt;img&gt; para adicionar a imagem na parte superior ou inferior do card. O elemento &lt;img&gt; deve ficar fora do body.</p>
+			<div class="container bg-white" style="margin: 16px #fff;">
+				<span class="font-weight-bold" style="font-size: 25px;">Exemplo</span>
+<pre><code>
+&lt;div class="card" style="width: 400px;"&gt;
+	&lt;img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"/&gt;
+	&lt;div class="card-body"&gt;
+		&lt;h4 class="card-title"&gt;John Doe&lt;/h4&gt;
+		&lt;p class="card-text"&gt;Lorem ipsum dolor&lt;/p&gt;
+		&lt;a class="btn btn-primary"&gt;Ver Perfil&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+				<span class="font-weight-bold" style="font-size: 25px;">Resultado</span>
+				<div class="card" style="width: 300px;">
+					<img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"/>
+					<div class="card-body">
+						<h4 class="card-title">John Doe</h4>
+						<p class="card-text">Lorem ipsum dolor</p>
+						<a class="btn btn-primary">Ver Perfil</a>
+					</div>
+				</div><br/>
+				<div class="card" style="width: 300px;">					
+					<div class="card-body">
+						<h4 class="card-title">Jay Doe</h4>
+						<p class="card-text">Lorem ipsum dolor</p>
+						<a class="btn btn-primary">Ver Perfil</a>
+					</div>
+					<img class="card-img-bottom" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"/>
+				</div>
+			</div>
+			<h2>Stretched Link</h2>
+			<p>Adicione a class .stretched-link a um link para fazer com que o card aja como um link (Evento de click e hover).</p>
+
+			<div class="card" style="width: 300px;">
+				<div class="card-body">
+					<h4 class="card-title">Title</h4>
+					<p class="card-text">Lorem ipsum dolor</p>
+					<a class="btn btn-primary stretched-link">Ver Perfil</a>
+				</div>
+			</div>
+			<h2>
+			<h2>Sobreposição de Imagem</h2>
+			<p>A class .card-img-overlay permite que você escreva um texto sobre a imagem de topo.</p>
+			<div class="card" style="width: 50%;">
+				<img class="img-card-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png"/>
+				<div class="card-img-overlay">
+					<h4 class="card-title">Card Image Overlay</h4>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+					<a class="card-link btn btn-primary">Ver Perfil</a>
+				</div>
+			</div>
+			<br>
+			<h2>Coluna de Cards</h2>
+			<p>A class .card-columns cria uma grade com os cards (tipo Pinterest). O layout se ajusta automaticamente conforme você adiciona cards.</p>
+			<span class="font-weight-bold">Nota: </span>Os cards são exibidos verticalmente em pequenas telas (menor do que 576px).
+
+			<div class="card-columns">
+				<div class="card bg-primary">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+				<div class="card bg-warning">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+				<div class="card bg-danger">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+				<div class="card bg-info">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+				<div class="card bg-secondary">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+				<div class="card bg-primary">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+			</div>
+
+			<h2>Card Deck</h2>
+			<p>A class .card-deck cria um grade com cards da mesma altura e largura.</p>
+			<div class="card-deck">
+				<div class="card bg-primary">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+				<div class="card bg-warning">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+				<div class="card bg-danger">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+					</div>
+				</div>
+				<div class="card bg-info">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+				<div class="card bg-secondary">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+				<div class="card bg-primary">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+			</div>
+
+			<h2>Grupo de Cards</h2>
+			<p>A class .card-group é parecido com card-deck, a diferença é que ela remove as margens da esquerda e direita.</p>
+			<div class="card-group">
+				<div class="card bg-primary">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+				<div class="card bg-warning">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+				<div class="card bg-danger">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+				<div class="card bg-info">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+					</div>
+				</div>
+				<div class="card bg-secondary">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+				<div class="card bg-primary">
+					<div class="card-body text-sm-center">
+						<p class="card-text">Lorem Ipsum</p>
+					</div>
+				</div>
+			</div>
+	</article>
+</body>
+</html>

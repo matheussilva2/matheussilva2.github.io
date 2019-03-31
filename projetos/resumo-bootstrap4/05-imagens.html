@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Bootstrap 4 - Imagens</title>
+	<link rel="stylesheet" type="text/css" href="_css/bootstrap.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no"/>
+</head>
+<body>
+	<header class="container-fluid bg-light">
+		<h1 class="text-primary display-4 text-sm-center">Bootstrap4 - Imagens</h1>
+	</header>
+	<main>
+		<section class="text-light container bg-primary pb-1">
+			<header>
+				<h2>Bordas das imagens</h2>
+			</header>
+			<p>No <strong>Bootstrap 4</strong> as imagens podem ser arredondadas usando as classes:
+				<ul class="list-unstyled">
+					<li>.rounded</li>
+					<li>.rounded-circle</li>
+					<li>.img-thumbnail</li>
+				</ul>	
+			</p>
+			<div class="container">
+				<h3>Exemplos:</h3>
+				<img class="rounded mr-5" src="_media/sanfran.jpg" width="20%"/>
+				<img src="_media/newyork.jpg" width="20%" class="rounded-circle mr-5"/>
+				<img src="_media/paris.jpg" width="20%" class="img-thumbnail mr-5"/>
+			</div>
+		</section>
+		<section class="container bg-white pb-3 pt-3">
+			<header>
+				<h2>Alinhamento de imagens</h2>
+			</header>
+			<div class="container">
+				<p>Com Bootstrap 4, as imagens podem ser alinhadas através da class <strong>.float-left</strong> e <strong>.float-right</strong></p>
+				<h3>Exemplo:</h3>
+				<img src="_media/paris.jpg" width="20%" class="float-left"/>&nbsp;
+				<img src="_media/newyork.jpg" width="20%" class="float-right"/>
+			</div>
+			<div class="container">
+				<p>Para linhamento centralizado, deve ser usado as classes .mx-auto (margin:auto) e .d-block(display:block)</p>
+				<img src="_media/sanfran.jpg" width="20%" class="d-block mx-auto">
+			</div>
+		</section>
+		<section  class="text-light bg-primary container pb-3 pt-3">
+			<header>
+				<h2 >Imagens Responsivas</h2>
+			</header>
+			<p>A class .img-fluid altera a escala da imagem se adaptando ao tamanho da tela. <span class="font-italic">(altere o tamanho da tela para ver o efeito)</span></p>
+			<img src="_media/img_chania.jpg" width="460" height="345" class="img-fluid" />
+		</section>
+	</main>
+	<script type="text/javascript" src="_js/bootstrap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap - Formularios Personalizados</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="_css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="_css/style.css">
+	</head>
+	<body>
+		<header class="navbar bg-bootstrap">
+			<a class="navbar-brand text-light" href="#">Bootstrap 4</a>
+		</header>
+		<main class="container bg-light my-2 py-2 px-5">
+			<h2>Formularios Personalizados</h2>
+			<p>O bootstrap trás classes para personalizar inputs de formulários, deixando-os diferente dos estilos padrões.</p>
+			<form action="#">
+				<div class="custom-control custom-checkbox mb-3">
+					<input id="checkbox1" type="checkbox" class="custom-control-input" name="exemplo1">
+					<label for="checkbox1" class="custom-control-label"> Customizado</label>
+				</div>
+				<input type="checkbox">
+				<label> Nativo</label>
+			</form>
+			<hr>
+			<h3>Criando Formulário Personalizados</h3>
+			<p>Existe um padrão de criação de inputs personalizados. Para os elementos <strong>checkbox, switch e radio</strong> segue o seguinte padrão: </p>
+			<ul>
+				<li>Crie uma div com a class <code>.custom-control</code> e <code>.custom-control-*(input type)</code></li>
+				<li>Adicione a class <code>.custom-control.input</code> ao input</li>
+				<li>Se houver label, adicione a class <code>.custom-control-label</code> a ele.</li>
+			</ul>
+
+			<!--Exemplo-->
+			<button type="button" class="btn btn-bootstrap text-white my-3" data-target="#exemplo1" data-toggle="collapse">Mostrar/Esconder Exemplo</button>
+			<div class="container bg-dark px-4 pt-2 my-2 collapse" id="exemplo1">
+				<span class="h5 text-light">Checkbox personalizado</span><hr>
+				<code><pre style="font-size: 13pt;" class="text-light">
+&lt;form action="#"&gt;
+	&lt;div class="custom-control custom-checkbox mb-3"&gt;
+		&lt;input id="checkbox1" type="checkbox" class="custom-control-input" name="exemplo1"&gt;
+		&lt;label for="checkbox1" class="custom-control-label"&gt; Customizado&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;input type="checkbox"&gt;
+	&lt;label&gt; Nativo&lt;/label&gt;
+&lt;/form&gt;
+				</pre></code>
+			</div>
+			<!-- fim exemplo -->
+
+			<h4>Checkbox</h4>
+			<form action="#">
+				<div class="custom-control custom-checkbox custom-control mb-3">
+					<input id="checkbox2" type="checkbox" class="custom-control-input" name="exemplo1">
+					<label for="checkbox2" class="custom-control-label"> Customizado</label>
+				</div>
+				<input type="checkbox">
+				<label> Nativo</label>
+			</form>
+
+			<h4>Switch</h4>
+			<form action="#">
+				<div class="custom-control custom-switch">
+					<input id="switch1" class="custom-control-input" type="checkbox">
+					<label for="switch1" class="custom-control-label"> Lorem</label>
+				</div>
+			</form>
+
+			<h4>Radio</h4>
+			<form action="#">
+				<div class="custom-control custom-radio">
+					<input id="radio1" type="radio" class="custom-control-input">
+					<label for="radio1" class="custom-control-label"> Lorem</label>
+				</div>
+			</form>
+
+			<hr>
+
+			<h3>Formularios Customizados Lineares</h3>
+			<p>Para fazer isso basta você adicionar a class <code>.custom-control-inline</code> na div que está guardando os inputs.</p>
+			<form>
+				<div class="custom-control custom-checkbox custom-control-inline">
+					<input id="checkbox3" type="checkbox" class="custom-control-input">
+					<label for="checkbox3" class="custom-control-label">Lorem 1</label>
+				</div>
+				<div class="custom-control custom-checkbox custom-control-inline">
+					<input id="checkbox4" type="checkbox" class="custom-control-input">
+					<label for="checkbox4" class="custom-control-label">Lorem 2</label>
+				</div>
+			</form>
+			<hr>
+			<h3>Select Menu Customizado</h3>
+			<p>Este é um dos inputs que não segue o padrão, porém é mais simplificado.</p>
+			<ul>
+				<li>Apenas adicione a class <code>.custom-select</code> no elemento &lt;select&gt;</li>
+			</ul>
+			<form>
+				<select class="custom-select mb-3">
+					<option>Lorem 1</option>
+					<option>Lorem 2</option>
+					<option>Lorem 3</option>
+				</select>
+			</form>
+			<div class="jumbotron mb-3">
+				<h4>Dica</h4>
+				<p>Você pode mudar o tamanho do select input através da class <code>.custom-select-* lg/sm</code></p>
+			</div>
+			<hr>
+			<h3>Range Customizado</h3>
+			<p>Apenas adicione a class <code>.custom-range</code> ao input do tipo range</p>
+			<form>
+				<input type="range" class="custom-range">
+			</form>
+
+			<hr>
+			<h3>Envio de Arquivo Customizado</h3>
+			<p>Este é um pouco mais complexo, porém não é difícil.</p>
+			<ul>
+				<li>Crie uma div com a class <code>.custom-file</code></li>
+				<li>Adicione a class <code>.custom-file-input</code> no input.</li>
+				<li>Se for usar label, aplique a class <code>.custom-control-label</code></li>
+			</ul>
+			<form>
+				<div class="custom-file">
+					<input id="customFile" type="file" class="custom-file-input">
+					<label for="customFile" class="custom-file-label">Escolher Arquivo...</label>
+				</div>
+			</form>
+
+			<!--Exemplo-->
+			<button type="button" class="btn btn-bootstrap text-white my-3" data-target="#exemplo2" data-toggle="collapse">Mostrar/Esconder Exemplo</button>
+			<div class="container bg-dark px-4 pt-2 my-2 collapse" id="exemplo2">
+				<span class="text-light h5">Envio de Arquivo Customizado</span><hr>
+
+				<code><pre style="font-size: 13pt;" class="text-light">
+&lt;form&gt;
+	&lt;div class="custom-file"&gt;
+		&lt;input id="customFile" type="file" class="custom-file-input"&gt;
+		&lt;label for="customFile" class="custom-file-label"&gt;Escolher Arquivo...&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+
+//Script para Atualizar o label com o nome do arquivo
+&lt;script type="text/javascript"&gt;
+	$(".custom-file-input").on("change",function(){
+		var nomeArquivo = $(this).val().split("\\").pop();
+		$(this).siblings('.custom-file-label').addClass('selected').html(nomeArquivo);
+	});
+&lt;/script&gt;
+				</pre></code>
+			</div>
+			<!-- fim exemplo -->
+
+		</main>
+		<!--Scripts imports -->
+		<script type="text/javascript" src="_js/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="_js/popper.min.js"></script>
+		<script type="text/javascript" src="_js/bootstrap.js"></script>
+		<script type="text/javascript">
+			$(".custom-file-input").on("change",function(){
+				var nomeArquivo = $(this).val().split("\\").pop();
+				$(this).siblings('.custom-file-label').addClass('selected').html(nomeArquivo);
+			});
+		</script>
+	</body>
+</html>

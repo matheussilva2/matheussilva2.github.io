@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap - Grupo de Inputs</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="_css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="_css/style.css">
+</head>
+<body>
+	<header class="navbar bg-bootstrap">
+		<a class="navbar-brand text-light" href="#">Bootstrap 4</a>
+	</header>
+	<main class="container bg-light my-2 py-2 px-5">
+		<div>
+			<h2>Grupos de Input</h2>
+			<p>Esta class contém um único raciocínio que irá acompanhar todo este artigo.</p>
+			<p>Para criar um grupo de input, use a class <code>.input-group</code></p>
+			<p>Dentro deste grupo, vc pode colocar um texto ou icone de ajuda usando a class <code>.input-group-prepend</code> para ficar antes do input ou <code>.input-group-append</code> para ficar após o input.</p>
+			<h3>Exemplos</h3>
+			<form>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">@</span>
+					</div>
+					<input class="form-control" type="text" placeholder="email@server.com">
+				</div>
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" placeholder="Pesquisa">
+					<div class="input-group-append">
+						<p class="input-group-text">Pesquisa</p>
+					</div>
+				</div>
+			</form>
+			<!--Exemplo-->
+			<button type="button" class="btn btn-bootstrap text-white my-3" data-target="#exemplo1" data-toggle="collapse">Mostrar código</button>
+			<div class="container bg-dark px-4 pt-2 my-2 collapse" id="exemplo1">
+				<span class="text-light">Código</span>
+
+				<code><pre style="font-size: 13pt;" class="text-light">
+&lt;form&gt;
+	&lt;div class="input-group mb-3"&gt;
+		&lt;div class="input-group-prepend"&gt;
+			&lt;span class="input-group-text"&gt;@&lt;/span&gt;
+		&lt;/div&gt;
+		&lt;input class="form-control" type="text" placeholder="email@server.com"&gt;
+	&lt;/div&gt;
+	&lt;div class="input-group mb-3"&gt;
+		&lt;input type="text" class="form-control" placeholder="Pesquisa"&gt;
+		&lt;div class="input-group-append"&gt;
+			&lt;p class="input-group-text"&gt;Pesquisa&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/form&gt;
+				</pre></code>
+			</div>
+			<!-- fim exemplo -->
+
+			<div class="jumbotron">
+				<h4>Dicazinha :3</h4>
+				<p>Coloque um <code>.mb-3</code> para dar uma borda legal.</p>
+			</div>
+		</div>
+		<hr>
+		<div>
+			<h2>Tamanho do grupo</h2>
+			<p>Daqui pra frente, siga o raciocínio da estrutura do input group citada acima.</p>
+			<p>Para definir o tamanho do grupo, adicione a class <code>.input-group-*</code> sendo os valores <code>sm/lg</code></p>
+			<form>
+				<div class="input-group input-group-sm mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">@</span>
+					</div>
+					<input type="email" class="form-control" placeholder="Seu melhor email"/>
+				</div>
+				<div class="input-group input-group-lg mb-3">
+					<input type="text" class="form-control">
+					<div class="input-group-append">
+						<span class="input-group-text">Pesquisa</span>
+					</div>
+				</div>
+			</form>
+		</div>
+		<hr>
+		<div>
+			<h2>Múltiplos textos de ajuda e input</h2>
+			<p>Para fazer isso, basta você colocar varios inputs ou helpers dentro do mesmo grupo</p>
+			<form>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Pesquisa</span>
+					</div>
+					<input type="text" class="form-control" placeholder="pesquisa">
+					<input type="button" class="btn btn-success" value="Pesquisar">
+				</div>
+			</form>
+		</div>
+		<hr>
+		<div>
+			<h2>Finalização</h2>
+			<p>Seguindo o raciocínio dos inputs e helpers múltiplos, você pode adicionar radio, checkbox ou até dropdown em seus grupos.</p>
+		</div>
+	</main>
+		
+	<!--Scripts imports -->
+	<script type="text/javascript" src="_js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="_js/popper.min.js"></script>
+	<script type="text/javascript" src="_js/bootstrap.js"></script>
+</body>
+</html>

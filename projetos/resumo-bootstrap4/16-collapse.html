@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap 4 - Collapse</title>
+	<link rel="stylesheet" type="text/css" href="_css/bootstrap.css"/>
+	<style>
+		p{
+			text-indent: 5px;
+		}
+	</style>
+</head>
+<body>
+<header class="container-fluid bg-success mb-3">
+	<h1 style="font-size: 33px;" class="text-light pb-2">Bootstrap 4 - Collapse</h1>
+</header>
+<article class="container bg-light pb-3">
+	<h3>O Conjunto Collapse</h3>
+	<p>Esta class é muito útil para esconder um grande parágrafo que será mostrado quando clicado em um botão ou link.</p>
+	<button type="button" class="btn btn-success mb-2" data-target="#demo" data-toggle="collapse">Mostrar Conteúdo</button>
+	<div class="collapse mb-2" id="demo">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+
+	<div class="container bg-dark px-4 pt-2">
+		<span class="text-light">Código</span>
+		<hr class="bg-light">
+		<code><pre class="text-light">
+&lt;button type="button" class="btn btn-success" data-target="#demo" data-toggle="collapse"&gt;Mostrar Conteúdo&lt;/button&gt;
+&lt;div class="collapse" id="demo"&gt;
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+&lt;/div&gt;
+		</pre></code>
+	</div>
+	<p>A class <code>.collapse</code> indica o elemento será colapsado, neste caso a nossa <code>div</code>. Para esconder ou mostrar o conteúdo, criamos um <code>button</code> ou <code>a</code> com o atributo <code>data-target="#id"</code> colocando o id da div que sera colapsada e também <code>data-toggle="collapse".</code></p>
+	<span class="text-info">Também podemos usar href nos elementos <code>&lt;a&gt;</code> para substituir o <code>data-target</code></span>
+	<h3>Collapse com Cards</h3>
+	<p>Neste caso usamos o atributo <code>data-parent="#id"</code> no card.</p>
+	<span class="text-info">Veja sobre os cards <a target="_blank" href="14-cards.html">clicando aqui</a>
+	</span>
+	<div id="accordion">
+		<div class="card">
+			<div class="card-header">
+				<a class="card-link" data-toggle="collapse" href="#collapseOne">
+					Colapsar grupo #1
+				</a>
+			</div>
+			<div id="collapseOne" class="collapse show" data-parent="#accordion">
+				<div class="card-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<a class="card-link" data-toggle="collapse" href="#collapseTwo">
+					Colapsar grupo #2
+				</a>
+			</div>
+			<div id="collapseTwo" class="collapse" data-parent="#accordion">
+				<div class="card-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<a class="card-link" data-toggle="collapse" href="#collapseThree">
+					Colapsar grupo #3
+				</a>
+			</div>
+			<div class="collapse" id="collapseThree" data-parent="#accordion">
+				<div class="card-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container bg-dark px-4 pt-2">
+		<span class="text-light">Código</span>
+		<hr class="bg-light">
+		<code><pre class="text-light">
+&lt;div id="accordion"&gt;
+	&lt;div class="card"&gt;
+		&lt;div class="card-header"&gt;
+			&lt;a class="card-link" data-toggle="collapse" href="#collapseOne"&gt;
+				Colapsar grupo #1
+			&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div id="collapseOne" class="collapse show" data-parent="#accordion"&gt;
+			&lt;div class="card-body"&gt;
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="card"&gt;
+		&lt;div class="card-header"&gt;
+			&lt;a class="card-link" data-toggle="collapse" href="#collapseTwo"&gt;
+				Colapsar grupo #2
+			&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div id="collapseTwo" class="collapse" data-parent="#accordion"&gt;
+			&lt;div class="card-body"&gt;
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="card"&gt;
+		&lt;div class="card-header"&gt;
+			&lt;a class="card-link" data-toggle="collapse" href="#collapseThree"&gt;
+				Colapsar grupo #3
+			&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class="collapse" id="collapseThree" data-parent="#accordion"&gt;
+			&lt;div class="card-body"&gt;
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+		</pre></code>
+	</div>
+</article>
+<script src="_js/jquery-3.3.1.js"></script>
+<script src="_js/popper.min.js"></script>
+<script src="_js/bootstrap.js"></script>
+</body>
+</html>

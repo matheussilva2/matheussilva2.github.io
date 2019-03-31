@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap4 - Tabelas</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<link rel="stylesheet" type="text/css" href="_css/bootstrap.css">
+	<script type="text/javascript" src="_js/bootstrap.js"></script>
+</head>
+<body class="bg-light">
+	<header>
+		<div class="container-fluid bg-primary">
+			<h1 class="display-4 text-sm-center text-white">Bootstrap4 - Tabelas</h1>
+		</div>
+	</header>
+	<section>
+		<header>
+			<h2 class="text-primary text-sm-center">Tabelas no Bootstrap4</h2>
+		</header>
+		<h4 class="text-sm-center text-primary">.table</h4>
+		<p class="text-secondary text-sm-center">Class base para todas as tabelas</p>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Firstname</th>
+					<th>Lastname</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>John</td>
+					<td>Doe</td>
+					<td>mary@example.com</td>
+				</tr>
+				<tr>
+					<td>Mary</td>
+					<td>Joe</td>
+					<td>mary@example.com</td>
+				</tr>
+				<tr>
+					<td>July</td>
+					<td>Dooley</td>
+					<td>july@example.com</td>
+				</tr>
+			</tbody>
+		</table>
+		<h4 class="text-sm-center text-primary">.table-stripped</h4>
+		<p class="text-secondary text-sm-center">A class table.stripped alterna cores</p>
+		<table class="table table-striped">
+			<thead>
+				<th>Firstname</th>
+				<th>Lastname</th>
+				<th>Email</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>John</td>
+					<td>Doe</td>
+					<td>john@example.com</td>
+				</tr>
+				<tr>
+					<td>Mary</td>
+					<td>Moe</td>
+					<td>mary@example.com</td>
+				</tr>
+				<tr>
+					<td>July</td>
+					<td>Dooley</td>
+					<td>july@example.com</td>
+				</tr>
+			</tbody>
+		</table>
+		<h4 class="text-sm-center text-primary">.table-bordered</h4>
+		<p class="text-secondary text-sm-center">Coloca bordas em todos os lados das células</p>
+		<table class="table table-bordered">
+			<thead>
+				<th>Firstname</th>
+				<th>Lastname</th>
+				<th>Email</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Matheus</td>
+					<td>Silva</td>
+					<td>matheus@example.com</td>
+				</tr>
+				<tr>
+					<td>Ana</td>
+					<td>Clara</td>
+					<td>ana@example.com</td>
+				</tr>
+				<tr>
+					<td>Julia</td>
+					<td>Santos</td>
+					<td>julia@example.com</td>
+				</tr>
+			</tbody>
+		</table>
+		<h4 class="text-sm-center text-primary">.table-hover</h4>
+		<p class="text-secondary text-sm-center">Esta classe faz com que a linha que o mouse está por cima escureça</p>
+		<table class="table table-hover">
+			<thead>
+				<th>Nome</th>
+				<th>Sobrenome</th>
+				<th>Email</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Matheus</td>
+					<td>Silva</td>
+					<td>matheus@example.com</td>
+				</tr>
+				<tr>
+					<td>Claudia</td>
+					<td>Santos</td>
+					<td>claudia@example.com</td>
+				</tr>
+				<tr>
+					<td>Julio</td>
+					<td>Silva</td>
+					<td>julio@example.com</td>
+				</tr>
+			</tbody>
+		</table>
+		<h4 class="text-sm-center text-primary">.table-dark</h4>
+		<p class="text-secondary text-sm-center">Esta classe deixa a tabela em tema <span class="text-dark text-uppercase">dark</span></p>
+		<table class="table table-dark">
+			<thead>
+				<th>Nome</th>
+				<th>Sobrenome</th>
+				<th>Email</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Matheus</td>
+					<td>Silva</td>
+					<td>matheus@example.com</td>
+				</tr>
+				<tr>
+					<td>Claudia</td>
+					<td>Santos</td>
+					<td>claudia@example.com</td>
+				</tr>
+				<tr>
+					<td>Julio</td>
+					<td>Silva</td>
+					<td>julio@example.com</td>
+				</tr>
+			</tbody>
+		</table>
+		<h4 class="text-sm-center text-primary">Table Dark e Stripped</h4>
+		<table class="table table-dark table-striped">
+			<thead>
+				<th>Nome</th>
+				<th>Sobrenome</th>
+				<th>Email</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Matheus</td>
+					<td>Silva</td>
+					<td>matheus@example.com</td>
+				</tr>
+				<tr>
+					<td>Claudia</td>
+					<td>Santos</td>
+					<td>claudia@example.com</td>
+				</tr>
+				<tr>
+					<td>Julio</td>
+					<td>Silva</td>
+					<td>julio@example.com</td>
+				</tr>
+			</tbody>
+		</table>
+		<h4 class="text-sm-center text-primary">Table Dark e Hover</h4>
+		<table class="table table-dark table-hover">
+			<thead>
+				<th>Nome</th>
+				<th>Sobrenome</th>
+				<th>Email</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Matheus</td>
+					<td>Silva</td>
+					<td>matheus@example.com</td>
+				</tr>
+				<tr>
+					<td>Claudia</td>
+					<td>Santos</td>
+					<td>claudia@example.com</td>
+				</tr>
+				<tr>
+					<td>Julio</td>
+					<td>Silva</td>
+					<td>julio@example.com</td>
+				</tr>
+			</tbody>
+		</table>
+		<h4 class="text-sm-center text-primary">.table-borderless</h4>
+		<p class="text-secondary text-sm-center">Esta classe tira todas as bordas da tabela</p>
+		<table class="table table-borderless">
+			<thead>
+				<th>Nome</th>
+				<th>Sobrenome</th>
+				<th>Email</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Matheus</td>
+					<td>Silva</td>
+					<td>matheus@example.com</td>
+				</tr>
+				<tr>
+					<td>Claudia</td>
+					<td>Santos</td>
+					<td>claudia@example.com</td>
+				</tr>
+				<tr>
+					<td>Julio</td>
+					<td>Silva</td>
+					<td>julio@example.com</td>
+				</tr>
+			</tbody>
+		</table>
+		<h4 class="text-sm-center text-primary">Contextualização nas Tabelas</h4>
+		<p class="text-secondary text-sm-center">table.* (default, primary, success, danger,info,warning, active, secondary, light, dark)</p>
+		<table class="table table-hover">
+			<thead>
+				<th>Nome</th>
+				<th>Sobrenome</th>
+				<th>Email</th>
+			</thead>
+			<tbody>
+				<tr class="table-danger">
+					<td>Matheus</td>
+					<td>Silva</td>
+					<td>matheus@example.com</td>
+				</tr>
+				<tr class="table-warning">
+					<td>Claudia</td>
+					<td>Santos</td>
+					<td>claudia@example.com</td>
+				</tr>
+				<tr>
+					<td>Julio</td>
+					<td>Silva</td>
+					<td>julio@example.com</td>
+				</tr>
+			</tbody>
+		</table>
+		<h4 class="text-sm-center text-primary">Table Head Colors</h4>
+		<p class="text-secondary text-sm-center">Cores do BG da Thead</p>
+		<table class="table table-hover">
+			<thead class="thead-light">
+				<th>Nome</th>
+				<th>Sobrenome</th>
+				<th>Email</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Matheus</td>
+					<td>Silva</td>
+					<td>matheus@example.com</td>
+				</tr>
+				<tr>
+					<td>Claudia</td>
+					<td>Santos</td>
+					<td>claudia@example.com</td>
+				</tr>
+				<tr>
+					<td>Julio</td>
+					<td>Silva</td>
+					<td>julio@example.com</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="container-fluid bg-info">
+			<p class="text-light blockquote">
+				Existem classes para resposividade: <br/>
+				.table-sm -> Reduz tamanho da tabela para dispositivos menores<br/>
+				.table-responsive -> Colocar um scroll na tabela para dispositivos pequenos e tabelas grandes.
+				<small class="text-secondary">
+					.table-responsive-*
+				</small>
+			</p>
+		</div>
+	</section>
+</body>
+</html>
