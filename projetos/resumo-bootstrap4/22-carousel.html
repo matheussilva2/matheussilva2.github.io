@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap 4 - Carousel</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style>
+		.bg-bootstrap{
+			background-color: #7952B3;
+		}
+		p{
+			text-indent: 5%;
+		}
+		.btn-bootstrap{
+			background-color: #7952B3;
+		}
+	</style>
+</head>
+<body>
+	<header class="navbar bg-bootstrap">
+		<a class="navbar-brand text-light" href="#">Bootstrap 4</a>
+	</header>
+	<article class="container bg-light mt-4 py-4 px-4">
+		<header>
+			<h1>Carousel</h1>
+		</header>
+		<p>Carousel é um apresentação de slide no estilo carrossel(como o próprio nome diz). A estrutura de um carousel é bem estruturada e simples de compreensão. Confira o exemplo: </p>
+		<div id="demo" class="carousel slide" data-ride="carousel">
+			<!-- Indicadores -->
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to=0 class="active"></li>
+				<li data-target="#demo" data-slide-to=1></li>
+				<li data-target="#demo" data-slide-to=2></li>
+			</ul>
+
+			<!-- As imagens -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="https://www.w3schools.com/bootstrap4/la.jpg">
+				</div>
+				<div class="carousel-item">
+					<img src="https://www.w3schools.com/bootstrap4/chicago.jpg">
+				</div>
+				<div class="carousel-item">
+					<img src="https://www.w3schools.com/bootstrap4/ny.jpg">
+				</div>
+			</div>
+
+			<!-- Controles Avançar e Retroceder -->
+			<a class="carousel-control-prev" href="#demo" data-slide="prev">
+				<i class="carousel-control-prev-icon"></i>
+			</a>
+			<a class="carousel-control-next" href="#demo" data-slide="next">
+				<i class="carousel-control-next-icon"></i>
+			</a>
+		</div>
+
+		<!--Exemplo-->
+			<button type="button" class="btn btn-bootstrap text-white my-3" data-target="#exemplo1" data-toggle="collapse">Mostrar código</button>
+			<div class="container bg-dark px-4 pt-2 my-2 collapse" id="exemplo1">
+
+				<code><pre style="font-size: 13pt;" class="text-light">
+&lt;div id="demo" class="carousel slide" data-ride="carousel"&gt;
+	&lt;!-- Indicadores --&gt;
+	&lt;ul class="carousel-indicators"&gt;
+		&lt;li data-target="#demo" data-slide-to=0 class="active"&gt;&lt;/li&gt;
+		&lt;li data-target="#demo" data-slide-to=1&gt;&lt;/li&gt;
+		&lt;li data-target="#demo" data-slide-to=2&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;!-- As imagens --&gt;
+	&lt;div class="carousel-inner"&gt;
+		&lt;div class="carousel-item"&gt;
+			&lt;img src="https://www.w3schools.com/bootstrap4/la.jpg"&gt;
+		&lt;/div&gt;
+		&lt;div class="carousel-item"&gt;
+			&lt;img src="https://www.w3schools.com/bootstrap4/chicago.jpg"&gt;
+		&lt;/div&gt;
+		&lt;div class="carousel-item"&gt;
+			&lt;img src="https://www.w3schools.com/bootstrap4/ny.jpg"&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;!-- Controles Avançar e Retroceder --&gt;
+	&lt;a class="carousel-control-prev" href="#demo" data-slide="prev"&gt;
+		&lt;i class="carousel-control-prev-icon"&gt;&lt;/i&gt;
+	&lt;/a&gt;
+	&lt;a class="carousel-control-next" href="#demo" data-slide="next"&gt;
+		&lt;i class="carousel-control-next-icon"&gt;&lt;/i&gt;
+	&lt;/a&gt;
+&lt;/div&gt;
+				</pre></code>
+			</div>
+			<!-- fim exemplo --><hr>
+	<h2>Tabela com cada class</h2>
+	<table>
+		<tr>
+			<th>Class</th>
+			<th>Descrição</th>
+		</tr>
+		<tr>
+			<td>.carousel</td>
+			<td>Cria o carousel</td>
+		</tr>
+		<tr>
+			<td>.carousel-indicators</td>
+			<td>Adiciona indicadores que te permite pular para um item especifico e também mostra o item atual</td>
+		</tr>
+		<tr>
+			<td>.carousel-item</td>
+			<td>Cria um item para o slide</td>
+		</tr>
+		<tr>
+			<td>.carousel-control-prev</td>
+			<td>Adiciona um botão para voltar ao o item anterior do carousel.</td>
+		</tr>
+		<tr>
+			<td>.carousel-control-next</td>
+			<td>Adiciona um botão para avançar ao próximo item do carousel.</td>
+		</tr>
+		<tr>
+			<td>.slide</td>
+			<td>Adiciona a transição deslizante dos itens. Remova essa class se você não quiser esta transição.</td>
+		</tr>
+	</table><hr>
+	<h2>Legendas</h2>
+	<p>Você pode adicionar legenda a cada item do seu slide, apenas adicione um <code>div.carousel-caption</code></p>
+	<!--Exemplo-->
+	<button type="button" class="btn btn-bootstrap text-white my-3" data-target="#exemplo2" data-toggle="collapse">Mostrar código</button>
+	<div class="container bg-dark px-4 pt-2 my-2 collapse" id="exemplo2">
+		<code><pre style="font-size: 13pt;" class="text-light">
+&lt;div class="carousel-item"&gt;
+  &lt;img src="link-da-img""&gt;
+  &lt;div class="carousel-caption"&gt;
+    &lt;h3&gt;Título&lt;/h3&gt;
+    &lt;p&gt;Sua descrição entra aqui!&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+		</pre></code>
+	</div>
+			<!-- fim exemplo -->
+
+	<div id="demo2" class="carousel slide" data-ride="carousel">
+			<!-- Indicadores -->
+			<ul class="carousel-indicators">
+				<li data-target="#demo2" data-slide-to=0 class="active"></li>
+				<li data-target="#demo2" data-slide-to=1></li>
+				<li data-target="#demo2" data-slide-to=2></li>
+			</ul>
+
+			<!-- As imagens -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="https://www.w3schools.com/bootstrap4/la.jpg">
+					<div class="carousel-caption">
+						<h3>Título 1</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium aliquid rem commodi.</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="https://www.w3schools.com/bootstrap4/chicago.jpg">
+					<div class="carousel-caption">
+						<h3>Título 2</h3>
+						<p>consectetur adipisicing elit. Praesentium aliquid rem commodi.</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="https://www.w3schools.com/bootstrap4/ny.jpg">
+					<div class="carousel-caption">
+						<h3>Título 3</h3>
+						<p> sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Controles Avançar e Retroceder -->
+			<a class="carousel-control-prev" href="#demo2" data-slide="prev">
+				<i class="carousel-control-prev-icon"></i>
+			</a>
+			<a class="carousel-control-next" href="#demo2" data-slide="next">
+				<i class="carousel-control-next-icon"></i>
+			</a>
+		</div>
+	</article>
+
+<!--Scripts imports -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
