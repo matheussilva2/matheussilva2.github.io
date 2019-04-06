@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Love Dropper ♥</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+	</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<script src="https://cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+	<style type="text/css">
+		.box{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			top: 450px;
+			left: 120px;
+			border-radius: 5px;
+			padding-left: 25px;
+			padding-top: 10px;
+			font-size: 50px;
+		}
+		#corpo{
+			background-color: #343a40;
+		}
+		@media screen and (max-width: 450px) {
+			.modal{
+				width: 360px;
+			}
+		}
+
+	</style>
+</head>
+<body id="corpo" class="container-fluid">
+	<div class="flex-row col">
+		<div id="loveBox" class="text-white box bg-danger" >
+				<i id="loveBox-icon" class="fas fa-heart"></i>
+		</div>
+	</div>
+	<!-- POPUP -->
+	<div class="modal" id="popup">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+
+	      <!-- Modal Header -->
+	      <div class="modal-header">
+	        <h4 class="modal-title">💖 For the cutest :3 💖</h4>
+	      </div>
+
+	      <!-- Modal body -->
+	      <div class="modal-body">
+			Isso realmente não é o suficiente pra demonstrar isso, mas foi o que pude fazer ;-; ❤❤
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- SCRIPTS -->
+	<script>
+		var isPlaying = false;
+		$(document).ready(function(){
+			if(!isPlaying){
+				$('#loveBox').click(function(){
+					isPlaying = true;
+					vibrar('#loveBox', 10);
+				})
+			}
+		});
+		async function backgroundRandomColor(elemento){
+			while(isPlaying){
+				var cor = corAleatoria();
+				$(elemento).animate({
+					backgroundColor: cor
+				});
+				await aguarde(50);
+			}
+		}
+		async function randomElementColor(elemento){
+			while(isPlaying){
+				var cor = corAleatoria();
+				$(elemento).animate({
+					color: cor
+				});
+				await aguarde(50);
+			}
+		}
+		function corAleatoria(){
+		    var hexadecimais = '0123456789ABCDEF';
+		    var cor = '#';
+		    for (var i = 0; i < 6; i++ ) {
+		        cor += hexadecimais[Math.floor(Math.random() * 16)];
+		    }
+		    return cor;
+		}
+		function vibrar(elemento, repeticoes){
+			var contador = 0;
+			var repeticoes = Math.round(repeticoes)
+			while(contador<repeticoes){
+				if(contador <= Math.round(repeticoes/5)){
+					$(elemento).animate({left: '+=5px'},100);
+					$(elemento).animate({left: '-=10px'},100);
+					$(elemento).animate({left: '+=5px'},100);
+				}else{
+					$(elemento).animate({left: '+=5px'},50);
+					$(elemento).animate({left: '-=10px'},50);
+					$(elemento).animate({left: '+=5px'},50);
+				}
+				contador++;
+			}
+			explodir('#loveBox');
+		}
+		async function mostrarPopup(){
+			await aguarde(4000);
+			$("#popup").fadeIn('SLOW');
+		}
+		function explodir(elemento){
+			$(elemento).animate({
+				width: '150px',
+				height: '150px',
+				left: '85px',
+				top: '330px',
+				paddingTop: '15px',
+				paddingLeft: '37px',
+				fontSize:'75px',
+			},'FAST',function(){gerarCoracoes(1000);backgroundRandomColor('#corpo');randomElementColor('#loveBox-icon');});
+			mostrarPopup();
+		}
+		async function gerarCoracoes(quantidade){
+			var contador = 0;
+			while(contador<=quantidade){
+				criarCoracao();
+				criarCoracao();
+				await aguarde(50);
+				contador++;
+			}
+			isPlaying=false;
+		}
+		function criarCoracao(){
+			//font-size
+			var tamanho = numeroAleatorio(30,60);
+
+			//Posição onde o coração será instanciado
+			var posicaoInicial = {
+				'x':numeroAleatorio(30,70),
+				'y':-35
+			};
+			var posicaoFinal = {
+				'x': numeroAleatorio(-155, 400),
+				'y': numeroAleatorio(-450, -100)
+			};
+			var emoji = emojiAleatorio();
+
+			//Pré-definição dos corações que serão instanciados
+			var html = '<span style="font-size:'+tamanho+'px;position:absolute;top:'+posicaoInicial['y']+'px;left:'+posicaoInicial['x']+'px;z-index:-1;">'+emoji+'</span>';
+
+			var coracao = $(html).appendTo('#loveBox');
+
+			coracao.animate({
+				top: posicaoFinal['y'],
+				left: posicaoFinal['x']
+			},'FAST',function(){this.remove();});
+		}
+
+		function numeroAleatorio(min, max) {
+			return Math.floor(Math.random() * (max - min + 1) ) + min;
+		}
+		function emojiAleatorio(){
+			var emojis = ['💓','💕','💖','💗','💞','💝','❤'];
+		    return emojis[numeroAleatorio(0,6)];
+		}
+
+		function aguarde(ms) {
+			return new Promise(resolve => setTimeout(resolve, ms));
+		}
+
+	</script>
+</body>
+</html>
