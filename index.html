@@ -1,1 +1,267 @@
-HelloWorld
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Character Controlller</title>
+	<style>
+		* {padding: 0; margin: 0;}
+		canvas {
+			background: #87cefa;
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body class="bg-dark">
+	<div class="container-fluid">
+	<h1 class="text-center my-3 text-white">
+		&nbsp;&nbsp;&nbsp;&nbsp;Pixel Adventure
+		<div style="font-size: 15px;" class="badge badge-primary">(Beta)</div>
+	</h1>
+	<canvas id="tela" width="480" height="320"></canvas><br>
+	</div>
+	<hr>
+	<p class="text-center mt-3 font-weight-bold text-white">Faz um pull request pro pai <span style="color: red;">♥♥</span><br><a href="https://github.com/matheussilva2/Pixel-Adventure" target="_blank">GitHub</a></p>
+	<script>
+		const mapa = [
+	{'cor':'#654321', 'x': 0, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 10, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 20, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 30, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 40, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 50, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 60, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 70, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 80, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 90, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 100, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 110, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 120, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 130, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 140, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 150, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 160, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 170, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 200, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 210, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 220, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 230, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 240, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 250, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 260, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 270, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 280, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 290, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 300, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 350, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 360, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 370, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 380, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 390, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 400, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 410, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 420, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 430, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 440, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 450, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 460, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 470, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 480, 'y':tela.height-10, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 0, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 10, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 20, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 30, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 40, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 50, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 60, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 70, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 80, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 90, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 100, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 110, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 120, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 130, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 140, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 150, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 160, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 170, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 200, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 210, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 220, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 230, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 240, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 250, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 260, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 270, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 280, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 290, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 300, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 350, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 360, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 370, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 380, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 390, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 400, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 410, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 420, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 430, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 440, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 450, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 460, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 470, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#008000', 'x': 480, 'y':tela.height-20, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 70, 'y':tela.height-50, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 80, 'y':tela.height-50, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 90, 'y':tela.height-50, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#654321', 'x': 100, 'y':tela.height-50, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#ffff00', 'x': 80, 'y':tela.height-80, 'h':10, 'w':10, 'colisor': true},
+	{'cor':'#ffff00', 'x': 90, 'y':tela.height-80, 'h':10, 'w':10, 'colisor': true},
+]
+
+function findBlockByVector(x,y){
+	for(var i=0;i < mapa.length; i++){
+		if(x == mapa[i].x && y == mapa[i].y)
+			return true;
+		if(x >= mapa[i].x && x <= mapa[i].x+10){
+			if(y >= mapa[i].y && y <= mapa[i].y+10)
+				return true;
+		}
+	}
+	return false;
+}
+	</script>
+
+	<script>
+	var character = {'cor':'#003366', 'x': 20, 'y':tela.height-30, 'h':10, 'w':10, 'colisor': true}
+	const velocidade = 2;
+	const aceleracao = 0.1;
+	const pulo = -5;
+
+	const aceleracaoGravidade = 0.3;
+
+	//Controlador
+	var moveCoords = {'x':0,'y':0}
+
+	function gravidade(){
+		if(!isGround()){
+			moveCoords.y += aceleracaoGravidade;
+		}else{
+			moveCoords.y = 0;
+		}
+	}
+
+	function move(){
+		if(moveCoords.x > 0)
+			if(!findBlockByVector(Math.ceil(Math.floor(character.x) / 10) * 10,character.y)){
+				character.x += moveCoords.x;
+			}else {
+				moveCoords.x = 0;
+			}
+		else if(moveCoords.x < 0){
+			if(!findBlockByVector((Math.ceil(Math.floor(character.x) / 10) * 10)-10,character.y)){
+				character.x += moveCoords.x;
+			}else {
+				moveCoords.x = 0;
+			}
+		}
+		character.y += moveCoords.y;
+		if(findBlockByVector(character.x, Math.ceil(Math.floor(character.y) / 10) * 10)){
+			character.y-=1;
+		}
+	}
+
+	function moveRight(){
+		while(moveCoords.x < velocidade){
+			moveCoords.x += velocidade;
+		}
+	}
+
+	function moveLeft(){
+		while(moveCoords.x > -velocidade){
+			moveCoords.x -= velocidade;
+		}
+	}
+
+	function keyDown(event){
+		//Check move X
+		if(event.key == 'd' || event.key == 'ArrowRight'){
+			moveRight();
+		}else if(event.key == 'a' || event.key == 'ArrowLeft'){
+			moveLeft();
+		}
+
+		//Check move Y
+		if(event.key == ' '){
+			if(isGround()){
+				moveCoords.y = pulo;
+			}
+		}
+	}
+
+	function keyUp(event){
+		if(event.key == 'd' || event.key == 'ArrowRight' || event.key == 'a' || event.key == 'ArrowLeft'){
+			while(moveCoords.x != 0){
+				if(moveCoords.x>0){
+					moveCoords.x -= velocidade;
+				}else{
+					moveCoords.x += velocidade;
+				}
+			}
+		}
+	}
+
+	function isGround(){
+		return findBlockByVector(Math.ceil(character.x), Math.ceil(character.y+character.w));
+	}
+
+	document.addEventListener("keydown", keyDown, false);
+	document.addEventListener("keyup", keyUp, false);
+
+	function gameOver(){
+		if(character.y > tela.height){
+			character.y = tela.height-40;
+			character.x = 20;
+		}
+	}
+
+	function loop(){
+		move();
+		gravidade();
+		gameOver();
+	}
+	setInterval(loop, 10);
+</script>
+	<script>
+		
+		var tela = document.getElementById('tela');
+var contexto = tela.getContext('2d');
+
+function renderMap(map){
+	for(var i=0;i<map.length;i++){
+		contexto.beginPath();
+		contexto.rect(map[i].x,map[i].y,map[i].w,map[i].h);
+		contexto.fillStyle = map[i].cor;
+		contexto.fill();
+		contexto.closePath();
+	}
+}
+
+function renderCharacter(character){
+	contexto.beginPath();
+	contexto.rect(character.x, character.y, character.w, character.h);
+	contexto.fillStyle = character.cor;
+	contexto.fill();
+	contexto.closePath();
+}
+
+function limparTela(){
+	contexto.clearRect(0,0,tela.width, tela.height);
+}
+
+setInterval(limparTela, 10);
+setInterval(renderMap, 10, mapa);
+setInterval(renderCharacter, 10, character);
+	</script>
+</body>
+</html>
