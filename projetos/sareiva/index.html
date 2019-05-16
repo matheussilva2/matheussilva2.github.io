@@ -67,7 +67,6 @@
 				$scope.adicionarAoCarrinho = function(cod){
 					if($scope.itemNaLista(cod)){
 						$scope.carrinho.push(cod);
-						console.log($scope.carrinho);
 					}else{
 						console.log("Livro não listado!");
 					}
@@ -85,22 +84,36 @@
 				};
 			});
 		</script>
-		<style>	
-		.fixed-button-right{
-				position: fixed;
-				background-color: #ff6961;
-				color: white;
-				font-size: 35px;
-				width: 70px;
-				height: 70px;
-				text-align: center;
-				line-height: 70px;
-				border-radius: 50%;
-				cursor: pointer;
-				left: 90%;
-				top: 85%;
-				z-index: 2;
-			}
+		<style>
+			.fixed-button-right{
+					background-color: #ff6961;
+					position: fixed;
+					color: white;
+					font-size: 35px;
+					width: 70px;
+					height: 70px;
+					text-align: center;
+					line-height: 70px;
+					border-radius: 50%;
+					cursor: pointer;
+					left: 70%;
+					top: 85%;
+					z-index: 2;
+				}
+				@media only screen and (min-width: 425px)
+				and (max-width: 767px){
+					.fixed-button-right{
+						left: 80%;
+						top: 85%;
+					};
+				}
+				@media only screen and (min-width: 768px)
+				and (max-width: 1440px){
+					.fixed-button-right{
+						left: 90%;
+						top: 85%;
+					};
+				}
 		</style>
 	</head>
 	<body ng-controller="sareivaController">
@@ -116,8 +129,8 @@
 		<main class="container-fluid my-3">
 			<h2 class="text-center py-3">Confira nossa lista de livros!</h2>
 			<hr>
-			<div class="row">
-				<div ng-repeat="livro in livros" class="col-12 col-md-6 col-lg-3 mb-5">
+			<div class="row justify-content-center">
+				<div ng-repeat="livro in livros" class="col-12 col-md-4 col-xl-3 mb-5">
 					<img style="height: 409px;" class="img-thumbnail mb-3" src="{{ livro.capa }}"/>
 					<h3 class="h4">{{livro.titulo}}</h3>
 					<p style="text-indent: 5px;">{{livro.descricao.slice(0,60)}}...</p>
@@ -149,7 +162,7 @@
 		<!-- Elementos Fora de Estrutura -->
 
 		<!--Botão fixo carrinho -->
-		<button ng-show="carrinho.length" data-toggle="modal" data-target="#carrinho" class="fixed-button-right">
+		<button ng-show="carrinho.length" data-toggle="modal" data-target="#carrinho" class="fixed-button-right border-0">
 			<i class="fas fa-shopping-cart"></i>
 		</button>
 
