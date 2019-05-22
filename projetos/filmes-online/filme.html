@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lorem Ipsum - Filmes Online</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<style type="text/css">
+		.bb-vermelha{
+			border-bottom: 7px solid #8B0000; 
+		}
+		.bb-arredondadas{
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+
+		.assistir-texto{
+			position: relative;
+			top:-90px;
+		}
+
+		.bg-black{
+			background-color: #000;
+		}
+
+		.btn-orange{
+			background-color: #F77E00;
+		}
+	</style>
+</head>
+<body class="bg-black">
+	<header class="navbar bg-black bb-vermelha bb-arredondadas">
+		<h1 class="text-white navbar-brand font-weight-bold">Filmes<span class="text-danger">Online</span></h1>
+	</header>
+	<main class="px-xl-5">
+		<div class="text-center my-3">
+			<button class="btn btn-lg btn-orange text-white font-weight-bold">Assistir Online</button>
+			<button class="btn btn-lg btn-orange text-white font-weight-bold">Baixar Agora</button>
+		</div>
+		<a id="play-link" href="./player.html" target="_blank" style="text-decoration: none;" class="text-white text-center">
+			<img id="filme-img" style="width: 100%;">
+			<h2 class="assistir-texto">Clique aqui para abrir o filme em uma nova janela</h2>
+		</a>
+	</main>
+
+	<script>
+		var img_url = "https://image.tmdb.org/t/p/w1280/remgeE1ak6CqU38EBLkFFFiQ5aQ.jpg";
+		var player_link = "./player.html";
+		document.getElementById("play-link").setAttribute("href", player_link);
+		document.getElementById("filme-img").setAttribute("src", img_url);
+	</script>
+</body>
+</html>
