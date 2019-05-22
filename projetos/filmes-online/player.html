@@ -14,23 +14,15 @@
 			border-bottom-right-radius: 5px;
 		}
 
-		.assistir-texto, .servidor-btn{
+		.servidor-btn{
 			position: relative;
 		}
 
-		.assistir-texto{
-			top:-90px;
-		}
-
 		.servidor-btn{
-			top:80%;
+			top:-10%;
 		}
 		.bg-black{
 			background-color: #000;
-		}
-
-		.btn-orange{
-			background-color: #F77E00;
 		}
 	</style>
 </head>
@@ -39,13 +31,17 @@
 		<h1 class="text-white navbar-brand font-weight-bold">Filmes<span class="text-danger">Online</span></h1>
 	</header>
 	<main class="px-xl-5">
-		<div style="height: 625px;background-image: url('https://image.tmdb.org/t/p/w1280/remgeE1ak6CqU38EBLkFFFiQ5aQ.jpg')">
-			<div style="padding-top: 40%;" class="text-center mx-auto">
-				<button class="btn btn-dark servidor-btn">Server#1 - Dublado</button>
-				<button class="btn btn-dark servidor-btn">Server#2 - Dublado</button>
-				<button class="btn btn-dark servidor-btn">Server#3 - Dublado</button>
+		<div>
+			<img id="filme-img" style="width: 100%;">
+			<div class="text-center mx-auto row">
+				<button class="btn btn-dark servidor-btn col-6">Server#1 - Dublado</button>
+				<button class="btn btn-dark servidor-btn col-6">Server#2 - Dublado</button>
 			</div>
 		</div>
 	</main>
+	<script>
+		var img_url = "https://image.tmdb.org/t/p/w1280/remgeE1ak6CqU38EBLkFFFiQ5aQ.jpg";
+		document.getElementById("filme-img").setAttribute("src", img_url);
+	</script>
 </body>
 </html>
