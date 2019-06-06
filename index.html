@@ -1,99 +1,210 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Matheus Silva</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1 shrink-to-fit=no"/>
+	<meta charset="utf-8"/>
+	<title>D&M - Criação de Sites</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-	<style>
-		.bg-bootstrap{
-			background-color: #7952B3;
-		}
-		.arredondado{
-			border-radius: 4px;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://kit.fontawesome.com/09a9fdc94b.js"></script>
 </head>
-<body class="bg-light">
+<body class="bg-dark pb-4">
 	<header>
-		<!--Navbar medium/large screens-->
-		<nav class="navbar navbar-expand-md bg-bootstrap navbar-dark">
-			<a href="#" class="navbar-brand">Matheus Silva</a>
-		
-			<!--Navbar Small Screens-->
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavbar">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="menuNavbar">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a href="https://instagram.com/math.desenhos" target="_blank" class="nav-link">Meus Desenhos</a>
-					</li>
-					<li class="nav-item">
-						<a href="./projetos/" class="nav-link">Projetos</a>
-					</li>
-				</ul>
+		<div id="header">
+			<div class="bg-dark" id="header-background"></div>
+			<div id="header-content">
+				<h1 class="text-center text-white">D&M Desenvolvimento WEB</h1>
+				<h2 class="text-center text-secondary">Lorem Ipsum Dolor</h2>
 			</div>
-		</nav>
-		
-		<div class="my-3"><h1 class="text-center">Matheus Silva - Portifólio</h1></div>
+		</div>
 	</header>
-	<main class="container mb-4">
-		<div class="my-3 arredondado">
-			<div style="background-image: url('images/pixel-adventure-thumbnail.jpg');height: 360px; background-size: 100%; background-position: bottom;" class="container-fluid py-3">
-				<div class="mt-md-3">
-					<h2 class="text-center text-white">
-						Pixel Adventure
-					</h2>
-					<div class="text-center h5 mb-3">
-						<span class="badge badge-success">HTML</span>
-						<span class="badge badge-primary">Javascript</span>
-					</div>
-					<p class="h4 text-white text-center">
-						Aventuras de um pixel em um pequeno mundo (realmente pequeno).&nbsp;
-					</p>
-				</div>
+	<section class="container-fluid mt-5 pt-3">
+		<div class="row text-center text-white">
+			<div class="col-md-4 col-sm-12 mb-sm-5">
+				<i style="font-size: 85px;" class="far fa-clock mb-3"></i>
+				<p class="h5">Prazo</p>
+				<p>Sempre buscamos entregar nossos projetos dentro do prazo.</p>
 			</div>
-
-			<a target="_blank" style="border-top-right-radius: 0px; border-top-left-radius: 0px;" class="btn btn-lg btn-primary font-weight-bold w-100" href="projetos/pixel_adventure/index.html">
-						Jogar
-			</a>
-		</div>
-		<hr>
-		<div style="background-image:url(images/five-reindeers-guild-img.png);background-size: 100%;height: 460px; background-position: center;" class="my-3 arredondado">
-			<div style="background-color: rgba(52,58,64,.6);" class="w-100 h-100 pt-4">
-				<h2 class="text-center text-white display-4">Meus Desenhos</h2>
-				<p style="margin-top: 240px;" class="h3 text-white text-center">Confira meus lindos desenhos :3<br><a class="btn btn-lg btn-primary mr-5" href="https://instagram.com/math.desenhos" target="_blank">Quero ver! *-*</a></p>
+			<div class="col-md-4 col-sm-12 mb-sm-5">
+				<i style="font-size: 85px;" class="far fa-clock mb-3"></i>
+				<p class="h5">Prazo</p>
+				<p>Sempre buscamos entregar nossos projetos dentro do prazo.</p>
+			</div>
+			<div class="col-md-4 col-sm-12 mb-sm-5">
+				<i style="font-size: 85px;" class="far fa-clock mb-3"></i>
+				<p class="h5">Prazo</p>
+				<p>Sempre buscamos entregar nossos projetos dentro do prazo.</p>
 			</div>
 		</div>
 		<hr>
-		<div class="arredondado" style="background-color: #ffd1dc;background-image: url(images/coracoes-bg.png);height: 460px;background-repeat: repeat;">
-			<div style="background-color: rgba(0,0,0,.6);" class="container-fluid h-100">
-				<h2 class="text-center text-white h1 pt-5">Love Dropper</h2>
-				<p style="margin-top: 200px;font-size: 25px;" class="px-4 text-light text-center font-weight-bold">Uma aplicação web que é uma verdadeira chuva de amor.<br>
-					<a style="background-color: #ff6961;" class="btn btn-lg font-weight-bold text-white mt-2" target="_blank" href="projetos/lovedroper.html">Quero ver!</a>
-				</p>
-			</div>
+	</section>
+	<section class="container text-white mt-3">
+		<h2 class="text-center my-5">Nossa Equipe</h2>
+		<div id="equipeCards" class="card-columns">
+			
 		</div>
-		<hr>
-		<div class="arredondado bg-success" style="height: 460px;">
-			<div class="container-fluid h-100">
-				<h2 class="text-center text-white h1 pt-5">Sareiva - Livros Online</h2>
-				<div class="text-center h5 mb-3">
-						<span class="badge badge-success">AngularJs</span>
-						<span class="badge badge-primary">Bootstrap4</span>
-					</div>
-				<p style="margin-top: 200px;font-size: 25px;" class="px-4 text-light text-center font-weight-bold">Uma loja de livros online com AngularJs.<br>
-					<a style="background-color: #ff6961;" class="btn btn-lg font-weight-bold text-white mt-2" target="_blank" href="projetos/sareiva">Acessar!</a>
-				</p>
-			</div>
-		</div>
+	</section>
+	<hr>
+	<main class="container mx-auto text-dark mt-3 mb-5">
+		<h2 class="text-center text-white my-4">Nossos Projetos</h2>
+		<div class="row" id="projetos"></div>
 	</main>
 
-	<!--SCRIPTS-->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<section style="display: none;" id="secaoFotos" class="container">
+		<header>
+			<h3 class="text-white text-center">Fotos do Projeto Selecionado</h3>
+		</header>
+		<hr>
+		<div id="carouselImagens" class="carousel slide" data-ride="carousel">
+			<div id="projetoFotos" class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="https://www.w3schools.com/bootstrap4/la.jpg">
+				</div>
+				<div class="carousel-item">
+					<img src="https://www.w3schools.com/bootstrap4/chicago.jpg">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselImagens" data-slide="prev">
+				<i class="carousel-control-prev-icon"></i>
+			</a>
+			<a class="carousel-control-next" href="#carouselImagens" data-slide="next">
+				<i class="carousel-control-next-icon"></i>
+			</a>
+		</div>
+	</section>
+<!--SCRIPTS-->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script>
+		const projetos = [
+			{
+				"titulo":"Sistema de Gestão Empresarial Integrado",
+				"descricao": "Sistema para fazer a gestão de funcionários, estoque, vendas e fluxo de caixa da empresa.",
+				"imgs":['images/chicago.jpg', 'images/la.jpg'],
+				"link": "#"
+			},
+			{
+				"titulo":"E-Commerce Argila Mais",
+				"descricao": "Criação de um e-commerce para a loja Argila Mais.",
+				"imgs": [],
+				"link": "#"
+			},
+			{
+				"titulo":"Gestão de Boletim",
+				"descricao": "Melhoria no sistema de gestão de boletim, permitindo que os professores insira ou altere as notas dos alunos com mais agilidade.",
+				"imgs":[],
+				"link": "#"
+			},
+			{
+				"titulo":"Gestão de Boletim",
+				"descricao": "Melhoria no sistema de gestão de boletim, permitindo que os professores insira ou altere as notas dos alunos com mais agilidade.",
+				"imgs":[],
+				"link": "#"
+			},
+			{
+				"titulo":"Livraria Online",
+				"descricao": "Projeto pessoal de livraria online.",
+				"imgs":[],
+				"link": "#"
+			},
+		];
+
+		const equipe = [
+			{
+				"nome":"Matheus Silva",
+				"foto": "images/fotinha.jpg",
+				"corCard": "bg-success", //class css
+				"textColor": "text-white", //class css
+				"descricao": "Tenho 20 anos, moro em Maceió-AL.<br> Sou desenvolvedor fullstack, mas na equipe atuo como front-end. Conhecimento nas linguagens básicas do front-end, PHP, Python e banco de dados MySQL."
+			},
+			{
+				"nome": "Davyd Sloan",
+				"foto": "images/pp.jpg",
+				"corCard": "bg-primary", //class css
+				"textColor": "text-white", //class css
+				"descricao": "Programador back-end e assediador de manequim"
+			},
+		];
+
+		var projetosElemento = $("#projetos");
+		var equipeElemento = $("#equipeCards");
+		var projetoFotos = $("#projetoFotos");
+		var secaoFotos = $("#secaoFotos");
+
+		var projetosView = [];
+		var projetosIsVisible = false;
+
+		$(document).ready(function(){
+			carregarEquipe();
+			carregarProjetos();
+			$(window).scroll(function(){
+				let scroll = $(window).scrollTop();
+				if(scroll >= 589 && !projetosIsVisible){
+					for (let i = 0; i < projetosView.length; i++) {
+						$(projetosView[i][0]).fadeIn(400);
+					}
+					projetosIsVisible = true;
+				}
+			});
+		});
+
+		function carregarEquipe(){
+			for(let i = 0; i < equipe.length; i++){
+				let membroView = "";
+				membroView += "<div style='height:480px;' class='card "+equipe[i].corCard+" "+equipe[i].textColor+"'>";
+					membroView += "<div class='card-header'>";
+						membroView += "<h4 class='text-center py-2'>"+equipe[i].nome+"</h4><hr>";
+						membroView += "<img width='170px' class='img img-thumbnail' src='"+equipe[i].foto+"' alt='imagem de '"+equipe[i].nome+"/>";
+					membroView += "</div>";
+					membroView += "<div class='card-body'>";
+						membroView += "<p>"+equipe[i].descricao+"</p>"
+					membroView += "</div>";
+					membroView += "<div class='card-footer'>";
+					membroView += "</div>";
+				membroView += "<div/>"
+				equipeElemento.append(membroView);
+			}
+		}
+
+		function carregarProjetos(){
+			for (let i = 0; i < projetos.length; i++) {
+				//Projeto view é apenas o modelo
+				let projetoView = "<div style='display:none;border-radius: 6px;' class='col-md-3 bg-white mx-3 p-3 mb-3'>";
+					projetoView += "<h3 class='text-center h4'>"+projetos[i].titulo+"</h3><hr>";
+					projetoView += "<p>"+projetos[i].descricao+"</p><hr>";
+					projetoView += "<a onclick='mostrarImagens("+i+")' class='btn btn-primary'>Ver Imagens</a>";
+				projetoView += "</div>";
+				//projeto Elemento é o objeto jQuery para ser controlado
+
+				let projetoElemento = $(projetoView);
+				projetosElemento.append(projetoElemento);
+				projetosView.push(projetoElemento);
+			}
+		}
+
+		function mostrarImagens(projetoIndex){
+
+			let fotoView = "";
+
+			for(let i = 0; i < projetos[projetoIndex].imgs.length; i++){
+				if(i==0){
+					fotoView += '<div class="carousel-item active">';
+					fotoView += '<img src="'+projetos[projetoIndex].imgs[i]+'">';
+					fotoView += '</div>';
+				}else{
+					fotoView += '<div class="carousel-item">';
+					fotoView += '<img src="'+projetos[projetoIndex].imgs[i]+'">';
+					fotoView += '</div>';
+				}
+			}
+			
+			projetoFotos.html(fotoView);
+			
+			secaoFotos.slideDown();
+			$("html, body").animate({ scrollTop: $(document).height() });
+		}
+
+	</script>
 </body>
 </html>
