@@ -1,0 +1,20 @@
+#header-background{
+	width: 100%;
+	height: 600px;
+	background-image: url("../images/header-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	filter: blur(3px);
+	z-index: 1;
+}
+
+#header-content{
+	position: absolute;
+	top: 250px;
+	left: 30%;
+	z-index: 2;
+}
+
+#header-content h1{
+	-webkit-text-stroke: 1px var(--blue);
+}
