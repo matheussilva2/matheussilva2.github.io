@@ -18,3 +18,7 @@
 #header-content h1{
 	-webkit-text-stroke: 1px var(--blue);
 }
+
+.site-title {
+	font-family: 'Catamaran', sans-serif;
+}
