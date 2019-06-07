@@ -12,6 +12,7 @@
 	position: absolute;
 	top: 250px;
 	z-index: 2;
+	left: 0px;
 }
 
 #header-content h1{
@@ -20,4 +21,5 @@
 
 .site-title {
 	font-family: 'Catamaran', sans-serif;
+	background-color: rgba(0,0,0,.9);
 }

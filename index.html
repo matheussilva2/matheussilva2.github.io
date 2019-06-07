@@ -10,10 +10,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
 </head>
 <body class="bg-dark pb-4">
-	<header class="container-fluid">
+	<header class="container-fluid ml-0 px-0">
 		<div id="header">
 			<div class="bg-dark" id="header-background"></div>
-			<div class="container-fluid" id="header-content">
+			<div class="container-fluid px-0" id="header-content">
 				<h1 class="text-center text-white site-title">D&M Desenvolvimento WEB</h1>
 				<h2 class="text-center text-secondary">Virtualize-se</h2>
 			</div>
@@ -39,16 +39,20 @@
 		</div>
 		<hr>
 	</section>
-	<section class="container text-white mt-3">
-		<h2 class="text-center my-5">Nossa Equipe</h2>
-		<div id="equipeCards" class="card-columns">
-			
+	<section class="container-fluid bg-light mt-3 py-4">
+		<div class="container text-white text-dark">
+			<h2 class="text-center my-5">Nossa Equipe</h2>
+			<div id="equipeCards" class="card-columns">
+				
+			</div>
 		</div>
 	</section>
 	<hr>
-	<main class="container mx-auto text-dark mt-3 mb-5">
-		<h2 class="text-center text-white my-4">Nossos Projetos</h2>
-		<div class="row" id="projetos"></div>
+	<main class="container-fluid bg-light mx-auto text-dark mt-3 mb-5 py-3">
+		<div class="container">
+			<h2 class="text-center my-4">Nossos Projetos</h2>
+			<div class="row justify-content-center" id="projetos"></div>
+		</div>
 	</main>
 
 	<section style="display: none;" id="secaoFotos" class="container-fluid">
@@ -83,25 +87,41 @@
 				"titulo":"Sistema de Gestão Empresarial Integrado",
 				"descricao": "Sistema para fazer a gestão de funcionários, estoque, vendas e fluxo de caixa da empresa.",
 				"imgs":['images/gestao/001.png', 'images/gestao/002.png','images/gestao/003.png'],
-				"link": "#"
+				"link": "#",
+				"ano" : 2019,
+				"site": "",
+				"siteTitulo": "Sistema Restrito"
+
 			},
 			{
 				"titulo":"E-Commerce Argila Mais",
 				"descricao": "Criação de um e-commerce para a loja Argila Mais.",
 				"imgs": ['images/argila/001.png'],
-				"link": "#"
+				"link": "#",
+				"ano" : 2019,
+				"site": "https://www.argilamais.com",
+				"siteTitulo": "Argila Mais"
+
 			},
 			{
 				"titulo":"Gestão de Boletim",
 				"descricao": "Melhoria no sistema de gestão de boletim, permitindo que os professores insira ou altere as notas dos alunos com mais agilidade.",
 				"imgs":['images/boletim/001.png','images/boletim/002.png'],
-				"link": "#"
+				"link": "#",
+				"ano" : 2019,
+				"site": "",
+				"siteTitulo": "Sistema Restrito"
+
 			},
 			{
 				"titulo":"Livraria Online",
 				"descricao": "Projeto pessoal de livraria online.",
 				"imgs":['images/sareiva/001.png','images/sareiva/002.png'],
-				"link": "#"
+				"link": "#",
+				"ano" : 2019,
+				"site": "https://matheussilva2.github.io/antigo/projetos/sareiva/",
+				"siteTitulo": "Sareiva"
+
 			},
 		];
 
@@ -165,11 +185,16 @@
 		function carregarProjetos(){
 			for (let i = 0; i < projetos.length; i++) {
 				//Projeto view é apenas o modelo
-				let projetoView = "<div style='display:none;border-radius: 6px;' class='col-md-3 bg-white mx-3 p-3 mb-3'>";
+				let projetoView = "<div class='col-md-12 bg-white ml-3 p-3 mb-3'>";
 					projetoView += "<h3 class='text-center h4'>"+projetos[i].titulo+"</h3><hr>";
-					projetoView += "<p>"+projetos[i].descricao+"</p><hr>";
+					projetoView += "<img class='img img-fluid img-thumbnail' src='"+projetos[i].imgs[0]+"'><hr>";
+					projetoView += "<p><strong>Descrição: </strong>"+projetos[i].descricao+"</p>";
+					projetoView += "<strong>Site: </strong><a target='_blank' href='"+projetos[i].site+"'>"+projetos[i].siteTitulo+"</a>";
+					projetoView += "<p><strong>Ano: </strong>"+projetos[i].ano+"</p><hr>";
 					projetoView += "<a onclick='mostrarImagens("+i+")' class='btn btn-primary text-white'>Ver Imagens</a>";
-				projetoView += "</div>";
+				projetoView += "</div><hr class='bg-dark'>";
+				
+
 				//projeto Elemento é o objeto jQuery para ser controlado
 
 				let projetoElemento = $(projetoView);
