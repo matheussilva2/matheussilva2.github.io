@@ -16,7 +16,7 @@
 }
 
 #header-content h1{
-	-webkit-text-stroke: 1px var(--blue);
+	-webkit-text-stroke: 1px #bbbbbb;
 }
 
 .site-title {
