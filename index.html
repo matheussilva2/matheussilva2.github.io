@@ -51,7 +51,7 @@
 	<main class="container-fluid bg-light mx-auto text-dark mt-3 mb-5 py-3">
 		<div class="container">
 			<h2 class="text-center my-4">Nossos Projetos</h2>
-			<div class="row justify-content-center" id="projetos"></div>
+			<div class="row text-center" id="projetos"></div>
 		</div>
 	</main>
 
@@ -185,7 +185,7 @@
 		function carregarProjetos(){
 			for (let i = 0; i < projetos.length; i++) {
 				//Projeto view é apenas o modelo
-				let projetoView = "<div class='col-md-12 bg-white ml-3 p-3 mb-3'>";
+				let projetoView = "<div class='container-fluid col-md-12 bg-white ml-3 p-3 mb-3'>";
 					projetoView += "<h3 class='text-center h4'>"+projetos[i].titulo+"</h3><hr>";
 					projetoView += "<img class='img img-fluid img-thumbnail' src='"+projetos[i].imgs[0]+"'><hr>";
 					projetoView += "<p><strong>Descrição: </strong>"+projetos[i].descricao+"</p>";
@@ -210,11 +210,11 @@
 			for(let i = 0; i < projetos[projetoIndex].imgs.length; i++){
 				if(i==0){
 					fotoView += '<div class="carousel-item active">';
-					fotoView += '<img src="'+projetos[projetoIndex].imgs[i]+'" class="img-fluid">';
+					fotoView += '<img src="'+projetos[projetoIndex].imgs[i]+'" class="img-fluid m-auto">';
 					fotoView += '</div>';
 				}else{
 					fotoView += '<div class="carousel-item">';
-					fotoView += '<img src="'+projetos[projetoIndex].imgs[i]+'" class="img-fluid">';
+					fotoView += '<img src="'+projetos[projetoIndex].imgs[i]+'" class="img-fluid m-auto">';
 					fotoView += '</div>';
 				}
 			}
