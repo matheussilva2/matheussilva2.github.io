@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokedex Topzeira</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark">
+	<!-- start form -->
+	<form id="initialForm" style="margin-top: 20%;" class="container">
+		<div class="input-group input-group-lg">
+			<input id="initialSearchInput" style="z-index: 2" type="text" class="form-control" placeholder="Type pokemon's name you are looking for..." required>
+			<div class="input-group-append">
+				<input id="initialSearchBtn" type="submit" class="btn btn-lg btn-success" value="Search">
+			</div>
+		</div>
+	</form>
+
+	<div style="display: none" id="infoScreen" class="container bg-transdark mx-auto">
+		<section class="bg-white mt-2 py-3" id="poke-info">
+			<div class="row">
+				<div class="col-12">
+					<header class="container-fluid mt-3 bg-light">
+						<strong id="pokemonName" class="text-dark"></strong>
+					</header>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-5">
+					<div class="px-2 py-3">
+						<div>
+							<a href="#"> &lt; </a>
+							<img id="poke-sprite" src="">
+							<a href="#">&gt;</a>
+						</div>
+						<div id="pokemonTypesBadges" class="mb-3">
+							<span id="type1" class="badge bg-secondary text-white">Test</span>
+							<span id="type2" class="badge bg-secondary text-white">Test</span>
+						</div>
+						<div class="btn-group btn-group-vertical pl-3 btn-group-lg">
+							<button id="statsBtn" type="button" class="btn btn-success mb-1">Stats</button>
+							<button id="abilitiesBtn" type="button" class="btn mb-1 btn-success">Abilities</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-6 pr-0">
+					<div id="stats-container" class="px-2 py-3">
+						<h4>Stats</h4>
+						<table class="table table-striped">
+							<tr>
+								<td><span class="font-weight-bold">HP</span></td>
+								<td id="poke-hp"></td>
+							</tr>
+							<tr>
+								<td><span class="font-weight-bold">ATK</span></td>
+								<td id="poke-atk"></td>
+							</tr>
+							<tr>
+								<td><span class="font-weight-bold">DEF</span></td>
+								<td id="poke-def"></td>
+							</tr>
+							<tr>
+								<td><span class="font-weight-bold">SpA</span></td>
+								<td id="poke-spa"></td>
+							</tr>
+							<tr>
+								<td><span class="font-weight-bold">SpD</span></td>
+								<td id="poke-spd"></td>
+							</tr>
+							<tr>
+								<td><span class="font-weight-bold">Speed</span></td>
+								<td id="poke-speed"></td>
+							</tr>
+							<tr>
+								<td><span class="font-weight-bold">Weight</span></td>
+								<td id="poke-weight"></td>
+							</tr>
+						</table>
+					</div>
+
+					<div id="abilities-container" class="px-2 py-3">
+						<h4>Abilities</h4><br>
+						<dl id="pokemonAbilitiesList">
+
+						</dl>
+					</div>
+				</div>
+			</div>
+			<form style="position: absolute;bottom: 20px;" id="searchForm" class="input-group col-12 justify-content-center">
+				<input type="text" id="searchInput" placeholder="Type pokemon's name and search...">
+				<div class="input-group-append">
+					<input id="searchBtn" type="submit" class="btn btn-success" value="Search">
+				</div>
+			</form>
+		</section>
+	</div>
+
+	<div id="loadingScreen" class="container loadingScreen">
+		<div class="loadingScreenContent">
+			<div class="spinner-border text-primary"></div>
+		</div>
+	</div>
+
+
+	<div id="bg">
+		<img src="images/bgpikachu.jpg" alt="">
+	</div>
+
+	<div class="notifications" id="notificationArea"></div>
+
+	<script src="bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+.bg-transdark {
+	background-color: rgba(0,0,0, .6);
+}
+
+#bg {
+	position: fixed;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	z-index: 0;
+}
+
+#bg img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	min-width: 50%;
+	min-height: 50%;
+	z-index: 0;
+}
+
+#infoScreen {
+	position: relative;
+	width: 500px;
+	height: 600px;
+	border: 10px solid #E21430;
+	border-radius: 25px;
+	z-index: 2;
+	opacity: 0;
+	transition: opacity .5s;
+}
+
+
+.poke-sprite {
+	width: 150px;
+	border: 1px solid black;
+}
+
+#poke-info{
+	height: 570px;
+	border-radius: 2px;
+	transition: height .5s;
+}
+
+#abilities-container{
+	opacity: 1;
+	transition: opacity .3s;
+	display: none;
+	height: 352px;
+	overflow-y: auto;
+}
+
+#stats-container {
+	opacity: 1;
+	transition: opacity .3s;
+}
+
+.notifications{
+    position: fixed;
+    display: block;
+    top: 20px;
+    left: 70%;
+    width: 400px;
+}
+
+.loadingScreen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.loadingScreenContent {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.loadingScreen, .loadingScreenContent{
+	z-index: 3;
+}
