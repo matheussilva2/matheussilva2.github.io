@@ -1,25 +1,236 @@
-#header-background{
-	width: 100%;
-	height: 600px;
-	background-image: url("../images/header-bg.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%;
-	filter: blur(3px);
-	z-index: 1;
+@import url('https://fonts.googleapis.com/css?family=Ruda&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-#header-content{
-	position: absolute;
-	top: 250px;
-	z-index: 2;
-	left: 0px;
+ul {
+    list-style: none;
 }
 
-#header-content h1{
-	-webkit-text-stroke: 1px #bbbbbb;
+body {
+    /*background-color: #363636;*/
+    background: linear-gradient(to top, #2A1E3D, #363636);
+    font-family: sans-serif;
+    color: #fafafa;
 }
 
-.site-title {
-	font-family: 'Catamaran', sans-serif;
-	background-color: rgba(0,0,0,.9);
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#main-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 500px;
+    padding-top: 70px;
+    background: linear-gradient(to bottom, #2A1E3D, #363636);
+}
+
+#main-header #titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#main-header #titles img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 10px;
+    border: 3px solid #fafafa;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, .8);
+}
+
+#main-header h1 {
+    font-size: 40px;
+    font-family: 'Ruda', sans-serif;
+}
+
+#main-header h2 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+#main-header .navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #563D7C;
+}
+.navbar .nav-item {
+    padding: 20px 20px;
+    background-color: #563D7C;
+    color: #fafafa;
+    transition: all .2s;
+    font-size: 18px;
+}
+
+.navbar .nav-item:hover {
+    background-color: #fafafa;
+    color: #563D7C;
+    font-weight: bold;
+}
+
+main {
+    width: 100%;
+    max-width: 1110px;
+    margin: 30px auto 0 auto;
+}
+
+section header h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: 'Ruda', sans-serif;
+}
+
+#projeto1 {
+    display: grid;
+    grid-template-areas: "imagem descricao";
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width: 1023px){
+    #projeto1 {
+        grid-template-areas: "imagem" "descricao";
+    }
+
+    #projeto1 legend {
+        padding: 0;
+    }
+
+    main{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+#projeto1 img {
+    grid-area: imagem;
+    width: 100%;
+    border: 5px solid #563D7C;
+    border-radius: 5px;
+}
+
+.projeto-thumbnail {
+    width: 100%;
+}
+
+.projeto-thumbnail-medium {
+    width: 100%;
+}
+
+#projeto1 legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    grid-area: descricao;
+    padding-left: 10px;
+}
+#projeto1 legend h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.badge {
+    background-color: salmon;
+    padding: 5px;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+#projetos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#projetos figure {
+    width: 500px;
+}
+
+#projetos figure img {
+    margin-bottom: 14px;
+    border: 5px solid #563D7C;
+    border-radius: 5px;
+}
+
+#projetos figure legend {
+    margin-bottom: 30px;
+}
+
+#sobre {
+    display: grid;
+    grid-template-areas: "sobre-foto sobre-texto";
+}
+
+@media screen and (max-width: 1023px){
+    #sobre{
+        grid-template-areas: "sobre-foto" "sobre-texto";
+    }
+    #sobre aside {
+        padding: 0;
+    }
+}
+
+#sobre img {
+    width: 300px;
+    grid-area: sobre-foto;
+    border: 5px solid #fff;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(221,205,247, .8);
+}
+
+#sobre aside {
+    grid-area: sobre-texto;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 200px;
+    padding-top: 20px;
+    text-indent: 20px;
+    text-align: justify;
+}
+
+#secao-sobre header h2{
+    font-family: 'Ruda', sans-serif;
+}
+
+footer {
+    display: flex;
+    height: 15vh;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #563D7C;
+    margin-top: 20px
+}
+
+footer h2 {
+    font-family: sans-serif;
+}
+
+footer ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    text-decoration: underline;
+    font-family: 'Ruda', sans-serif;
+    font-size: 16px;
 }
