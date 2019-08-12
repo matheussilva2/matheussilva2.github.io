@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html ng-app="sareiva">
+	<head>
+		<title>Sareiva - Livros Online</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1 shrink-to-fit=no"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+		<script>
+			angular.module("sareiva",[]);
+			angular.module("sareiva").controller("sareivaController", function($scope)
+			{
+				$scope.livros = [
+					{
+						isbn: "9789897770388",
+						titulo:"Aprendendo Python",
+						autor:"MARK LUTZ, David Ascher",
+						capa: "https://images.livrariasaraiva.com.br/imagemnet/imagem.aspx/?pro_id=1973407&qld=90&l=265&a=265",
+						descricao: "Aprenda Python do básico ao avançado com este incrível livro!",
+						preco: 184.24,
+					},
+					{
+						isbn: "9780131646995",
+						titulo:"Redes de Computadores",
+						autor:"Andrew Stuart Tanenbaum",
+						capa: "https://images-na.ssl-images-amazon.com/images/I/61vFb0remWL.jpg",
+						descricao: "Redes de computadores foi atualizado para refletir as tecnologias mais novas e mais importantes de redes, com ênfase especial em redes sem fio, incluindo 802.11, Bluetooth, comunicação sem fio de banda larga, redes ad hoc, i-mode e WAP...",
+						preco: 257.07,
+					},
+					{
+						isbn: "9788594188243",
+						titulo:"Orientação a Objetos em C#",
+						autor:"Everton Coimbra de Araújo",
+						capa: "https://cdn.shopify.com/s/files/1/0155/7645/products/Amazon-Orientacao-a-Objetos-em-C_large.jpg",
+						descricao: "Nas últimas décadas, o paradigma da Orientação a Objetos tem servido como alicerce para o desenvolvimento de uma ampla gama de linguagens de programação e de ambientes integrados para o desenvolvimento de sistemas informatizados. É necessária uma compreensão profunda dos conceitos inerentes a este moderno paradigma, bem como saber aplicá-los na prática, para que se consiga maximizar seus benefícios: produzir sistemas bem-estruturados, com boa manutenibilidade e alta produtividade.",
+						preco: 257.07,
+					},
+					{
+						isbn: "9788594188243",
+						titulo:"Bootstrap 4",
+						autor:"Natan Souza",
+						capa: "https://cdn.shopify.com/s/files/1/0155/7645/products/bhaqv_w_K03vnwWTS9CjbLLnOI9Ifdq9TbEYpEowN30_large.jpg",
+						descricao: "Fazer um site elegante nunca foi tão fácil, mesmo para quem não sabe escrever uma linha de CSS e, muito menos, entende como harmonizar cores, balancear elementos e tipografia. O Bootstrap é, resumidamente, um grande arquivo CSS com uma excelente documentação, que possui dezenas e dezenas de componentes prontos. No começo, foi criado pelo Twitter para servir como um guia de estilos em CSS da empresa; hoje, é a biblioteca mais famosa e utilizada no mundo.",
+						preco: 49.90,
+					},
+					{
+						isbn: "9788594188243",
+						titulo:"Turbine seu CSS",
+						autor:"Rosicléia Frasson",
+						capa: "https://cdn.shopify.com/s/files/1/0155/7645/products/UtsjsksRzpBazwXpCYBVASxHRrhHeLxopPGZxoyExbw_large.jpg?v=1478227993",
+						descricao: "Pré-processadores funcionam como uma extensão do CSS para auxiliar na criação de folhas de estilo com a adição de funcionalidades. Eles ajudam a diminuir a repetição de código e permitem implementar mudanças de forma mais rápida.",
+						preco: 69.90,
+						desconto: 50,
+					},
+					{
+						isbn: "9788555190643",
+						titulo:"Jogos em HTML5",
+						autor:"Éderson Cássio",
+						capa: "https://cdn.shopify.com/s/files/1/0155/7645/products/jogos-mobile-cordova-featured_large.png",
+						descricao: "O HTML 5 é uma linguagem praticamente onipresente. Ela está presente nos computadores, tablets, celulares e vários outros dispositivos. Essa onipresença, aliada com o poder da linguagem e suas novas especificações, faz com que ela também seja usada para desenvolver jogos.",
+						preco: 59.90,
+					},
+				];
+				$scope.carrinho = [];
+
+				$scope.adicionarAoCarrinho = function(cod){
+					if($scope.itemNaLista(cod)){
+						$scope.carrinho.push(cod);
+					}else{
+						console.log("Livro não listado!");
+					}
+				};
+
+				$scope.itemNaLista = function(cod){
+					return $scope.livros.some(function(livro){
+						return livro.isbn == cod;
+					});
+				};
+				$scope.procurarLivro = function(isbn){
+					return $scope.livros.find(function(livro){
+						return livro.isbn == isbn;
+					});
+				};
+			});
+		</script>
+		<style>
+			.fixed-button-right{
+					background-color: #ff6961;
+					position: fixed;
+					color: white;
+					font-size: 35px;
+					width: 70px;
+					height: 70px;
+					text-align: center;
+					line-height: 70px;
+					border-radius: 50%;
+					cursor: pointer;
+					left: 70%;
+					top: 85%;
+					z-index: 2;
+				}
+				@media only screen and (min-width: 425px)
+				and (max-width: 767px){
+					.fixed-button-right{
+						left: 80%;
+						top: 85%;
+					};
+				}
+				@media only screen and (min-width: 768px)
+				and (max-width: 1440px){
+					.fixed-button-right{
+						left: 90%;
+						top: 85%;
+					};
+				}
+		</style>
+	</head>
+	<body ng-controller="sareivaController">
+		<header class="navbar navbar-dark bg-primary">
+			<h1 class="navbar-brand">Sareiva</h1>
+			<i class="fas fa-shopping-cart mr-4 text-white d-none"></i>
+		</header>
+		<h2 class="text-center display-3 mt-3 h4">
+			Sareiva
+		</h2>
+
+		<p class="text-center h4 text-secondary mb-3">A sua livraria online</p>
+		<main class="container-fluid my-3">
+			<h2 class="text-center py-3">Confira nossa lista de livros!</h2>
+			<hr>
+			<div class="row justify-content-center">
+				<div ng-repeat="livro in livros" class="col-12 col-md-4 col-xl-3 mb-5">
+					<img style="height: 409px;" class="img-thumbnail mb-3" src="{{ livro.capa }}"/>
+					<h3 class="h4">{{livro.titulo}}</h3>
+					<p style="text-indent: 5px;">{{livro.descricao.slice(0,60)}}...</p>
+					<span class="text-secondary">Por {{livro.autor}}</span><br>
+					<hr>
+					<button data-toggle="modal" data-target="#itemAdicionado" ng-click="adicionarAoCarrinho(livro.isbn)" class="btn btn-success"><i class="fas fa-cart-plus">
+						
+					</i>
+				</button>
+					<span class="font-weight-bold d-inline ml-3">R${{livro.preco.toFixed(2)}}</span>
+				</div>
+			</div>
+		</main>
+		<footer class="container-fluid mt-3 py-4 bg-light">
+			<p class="text-center">
+				<strong>Fonte das imagens</strong>
+				<br>
+				Amazon
+				<br>
+				Casa do Código
+				<br>
+				Livraria Saraiva
+			</p>
+			<p class="text-center">
+				<a class="font-weight-bold" href="https://matheussilva2.github.io">Matheus Silva</a> | &copy;2019
+			</p>
+		</footer>
+		
+		<!-- Elementos Fora de Estrutura -->
+
+		<!--Botão fixo carrinho -->
+		<button ng-show="carrinho.length" data-toggle="modal" data-target="#carrinho" class="fixed-button-right border-0">
+			<i class="fas fa-shopping-cart"></i>
+		</button>
+
+		<!-- Notificação de item adicionado ao carrinho -->
+		<div id="itemAdicionado" class="modal fade" role="dialog" >
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Sucesso!</h4>
+						<button type="button" class="close" data-dismiss="modal">
+							&times;
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>
+							Seu livro foi adicionado ao carrinho<span style="color: red;">❤️</span>
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Carrinho -->
+		<div id="carrinho" class="modal fade" role="dialog" >
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Carrinho</h4>
+						<button type="button" class="close" data-dismiss="modal">
+							&times;
+						</button>
+					</div>
+					<div class="modal-body">
+						<table>
+							<tr>
+								<th>Titulo</th>
+								<th>Preço</th>
+							</tr>
+							<tr ng-repeat="isbn in carrinho track by $index">
+								<td class="pr-3">
+									{{procurarLivro(isbn).titulo}}
+								</td>
+								<td>
+									{{procurarLivro(isbn).preco}}
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Scripts Import -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	</body>
+</html>
