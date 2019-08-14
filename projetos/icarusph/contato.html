@@ -7,10 +7,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/contato.css">
 	</head>
 
 	<body>
-		<header class="container-fluid atf-container p-0">
+		<header class="container-fluid p-0">
 			<!-- Desktop navbar -->
 			<div style="background: rgba(0,0,0, .4);" class="navbar navbar-expand-sm justify-content-between justify-content-md-around navbar-dark">
 				<a href='index.html'><h1 class="navbar-brand">IcarusPh</h1></a>
@@ -27,7 +28,7 @@
 							</a>
 						</li>
 						<li class="nav-item">
-							<a href="contato.html" class="nav-link">
+							<a href="#" class="nav-link">
 								Contato
 							</a>
 						</li>
@@ -36,20 +37,25 @@
 			</div>
 		</header>
 
-		<main class="container-fluid p-0">
-			<section>
-				<div class="lista-imagens" id="lista-imagens">
-					
+		<main>
+			<h2>Contato</h2>
+			<div class="contato-container">
+				<div class="icone-container">
+					<a target="_blank" href="https://www.instagram.com/icarus_ph">
+						<img src="images/icons/icone-contato.jpg" alt="Icone Camera" />
+					</a>
 				</div>
-			</section>
+
+				<div class="contatos-container">
+					<div style="display: flex; justify-content: center;">
+						<img class="icone-contato" src="images/icons/instagram-icon.png" alt="Ícone Instagram">
+						<a target="_blank" href="https://www.instagram.com/icarus_ph" class="contato">icarus_ph</a>
+					</div>
+				</div>
+			</div>		
 		</main>
 
-		<footer class="container-fluid mt-sm-0 mt-md-1 p-0 mb-0 py-4">
-			<a href="https://www.instagram.com/icarus_ph/" target="_blank">
-				<p class="h4 text-center text-white py-2 font-weight-bold bg-instagram" style="font-family: sans-serif;">
-						<span class="badge p-2" style="border: 2px solid white;">@</span>&nbsp;Icarus_ph
-					</p>
-			</a>
+		<footer class="container-fluid mt-sm-0 mt-md-1 p-0 mb-0 py-5">
 				<p class="text-center text-white mb-0">Ícaro Ian - &copy;2018</p>
 		</footer>
 
@@ -73,34 +79,11 @@
 				</ul>
 			</div>
 		</div>
+	
 
-		<!-- popup da imagem -->
-		<div id="image-popup-container" class="container-fluid mx-auto imagem-popup">
-			<div id="close-button-popup" class="close-button">
-				<i class="h1 text-white">&times;</i>
-			</div>
-
-			<img id="popupImage" src="" alt="">
-
-			<div id="control-buttons-container">
-				<i id="previousImageBtn" class="h1 text-white"> &lt; </i>
-				<i id="nextImageBtn" class="h1 text-white"> &gt; </i>
-			</div>
-		</div>
-
-		<!-- scripts -->
-			<script src="js/jquery.min.js"></script>
-			<script src="js/popper.min.js"></script>
-			<script src="js/bootstrap.min.js"></script>
-			
-			<!-- Mostrar e ocultar o navbar ao rolar a página -->
-			<script src="js/rolagem.js"></script>
-			<!-- Lista de imagens -->
-			<script src="js/imagens.js"></script>
-
-			<script src="js/popup-image.js"></script>
-
-			<script src="js/index.js"></script>
+	<!-- Scripts -->
+	<!-- Mostrar e ocultar o navbar ao rolar a página -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/rolagem.js"></script>
 	</body>
-
 </html>
