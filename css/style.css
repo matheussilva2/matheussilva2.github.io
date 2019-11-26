@@ -219,7 +219,7 @@ section header h2 {
     border-radius: 50%;
     border: 2px solid #fafafa;
     box-shadow: 0;
-    top: calc(100vh - (65px + 30px));
+    top: 85vh;
     left: calc(100vw - (65px + 30px));
     transition: all .2s ease-in-out;
 }
