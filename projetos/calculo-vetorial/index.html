@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cálculo Vetorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.main {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			padding: 0 20px;
+			margin-top: calc(100vh / 2 - 250px);
+		}
+
+		.main canvas {
+			background: #009e05;
+			width: 500px;
+			height: 500px;
+			max-width: 100%;
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -webkit-crisp-edges;
+			image-rendering: pixelated;
+			image-rendering: crisp-edges;
+			-webkit-box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.19);
+			-moz-box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.19);
+			box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.19);
+		}
+
+		.options {
+			width: 700px;
+		}
+		#markPosition {
+			width: 100px;
+			height: 40px;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<canvas id="canvas" width="500" height="500"></canvas>
+		<div class="options">
+			<label id="posX">Posição X: 0</label><br>
+			<label id="posY">Posição Y: 0</label><br>
+			<hr>
+			<label id="posMarkedX">Posição X Marcada: 0</label><br>
+			<label id="posMarkedY">Posição Y Marcada: 0</label><br>
+			<hr>
+			<label id="deslocamentoX">Deslocamento X: 0</label><br>
+			<label id="deslocamentoY">Deslocamento Y: 0</label><br>
+			<hr>
+			<label id="calculo">Cálculo: </label><br>
+			<label id="resultante">Resultante: 0</label><br>
+
+			<button id="markPosition">Marcar Posição</button>
+
+		</div>
+	</div>
+
+	<script src="./index.js"></script>
+</body>
+</html>
